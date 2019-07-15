@@ -1,0 +1,15 @@
+.chosen-characters-area {
+  height: 300px;
+  width: 400px;
+  overflow: hidden;
+ }
+ .chosen-characters-area chosen-img {
+  height: auto;
+  width: 400px;
+ }
+
+ .chosen-characters {
+   display: flex;
+   border-bottom: 1px solid;
+
+ }
