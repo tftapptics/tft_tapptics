@@ -7,5 +7,12 @@ describe('actions', () => {
     const result = actions.isLoading(true);
 
     expect(result).toEqual(expected);
-  })
-})
+  });
+
+  it('should return a message in case of an error', () => {
+    const expected = { type: 'SET_ERROR', message: 'Error!'};
+    const result = actions.setError('Error!');
+
+    expect(result).toEqual(expected);
+  });
+});
