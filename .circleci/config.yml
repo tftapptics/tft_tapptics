@@ -1,16 +1,21 @@
 version: 2
 jobs:
   build:
+    working_directory: ~/redux-async
     docker:
-      - image: debian:stretch
-
+      - image: circleci/node:8
     steps:
       - checkout
-
+      - restore_cache:
+          key: npm-cache-v1-{{ checksum "package-lock.json" }}
       - run:
-          name: Greeting
-          command: echo Hello, world.
-
+          name: Install Dependencies
+          command: npm ci
+      - save_cache:
+          key: npm-cache-v1-{{ checksum "package-lock.json" }}
+          paths:
+            - /home/circleci/.npm
       - run:
-          name: Print the Current Time
-          command: date
+          name: Run Tests
+          command: npm test
+			  
