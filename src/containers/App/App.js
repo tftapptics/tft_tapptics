@@ -1,5 +1,10 @@
-import React, { Component } from 'react'
-import MainPage from '../MainPage'
+import React, { Component } from 'react';
+import MainPage from '../MainPage';
+import Champions from '../Champions/Champions';
+import Items from '../Items/Items';
+import TeamBuilder from '../TeamBuilder/TeamBuilder';
+import Synergies from '../Synergies/Synergies';
+import NoMatch from '../../components/NoMatch';
 
 class App extends Component {
   render() {
@@ -11,7 +16,7 @@ class App extends Component {
       </header>
       <Switch>
         <Route exact path="/" component={MainPage} />
-        <Route exact path="/teams" component={teams} />
+        <Route exact path="/team-builder" component={TeamBuilder} />
         <Route exact path="/items" component={Items} />
         <Route exact path="/champions" component={Champions} />
         <Route exact path="/synergies" component={Synergies} />
