@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import MainPage from '../MainPage';
 import Champions from '../Champions/Champions';
 import Items from '../Items/Items';
 import TeamBuilder from '../TeamBuilder/TeamBuilder';
 import Synergies from '../Synergies/Synergies';
-import NoMatch from '../../components/NoMatch';
+import NoMatch from '../../components/NoMatch/NoMatch';
 
 class App extends Component {
   render() {
