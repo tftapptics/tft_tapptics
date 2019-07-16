@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import poro from '../../assets/images/poro.gif';
 
 export default function Loading() {
   return (
     <div>
-      <h3>is loading, fran</h3>
+      <img src={poro} alt="loading poro" />
     </div>
   )
 }
