@@ -1,5 +1,7 @@
 # Description
+
 Please include a summary of the change and which issue is fixed. Please also include relevant motivation and context. List any dependencies that are required for this change.
+
 
 `Your message here`
 
@@ -17,7 +19,9 @@ Please include a summary of the change and which issue is fixed. Please also inc
 
 - [ ] No
 - [ ] Yes
+
 Please describe the tests that you ran to verify your changes. Provide instructions so we can reproduce. Please also list any relevant details for your test configuration:
+
 `Your message here`
 
 
@@ -33,5 +37,7 @@ Please describe the tests that you ran to verify your changes. Provide instructi
 - [ ] I have performed a self-review of my own code
 - [ ] I have commented on my code, particularly in hard-to-understand areas
 
+
 Co-Authored-By: Raechel Odom <odom.raechel@gmail.com>
-Co-Authored-By: Duy Vu <@gmail.com>
+Co-Authored-By: Duy Vu <duyv.thanh@gmail.com>
+
