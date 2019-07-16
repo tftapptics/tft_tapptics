@@ -1,18 +1,16 @@
 import React from 'react';
-import ChosenCharacters from './ChosenCharacters';
 import { shallow } from 'enzyme';
+import Synergies from './Synergies';
 
-describe('ChosenCharacters', () => {
+describe('Synergies', () => {
 
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<ChosenCharacters />);
+    wrapper = shallow(<Synergies/>);
   });
 
   it('should match the snapshot with all the data passed in', () => {
     expect(wrapper).toMatchSnapshot();
   });
-
-  
 });

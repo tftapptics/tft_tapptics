@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Items should match the snapshot with all the data passed in 1`] = `
+<div>
+  <h1>
+    items, son
+  </h1>
+</div>
+`;

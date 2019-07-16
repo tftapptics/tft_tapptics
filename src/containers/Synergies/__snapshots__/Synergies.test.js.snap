@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Synergies should match the snapshot with all the data passed in 1`] = `
+<div>
+  <h2>
+    here's yo synergies, mayne
+  </h2>
+</div>
+`;

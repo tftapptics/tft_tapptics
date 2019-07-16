@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChosenDisplay should match the snapshot iwth all the data passed in 1`] = `
+<div
+  className="chosen-display"
+>
+  <h2>
+    Current level:1
+  </h2>
+  <ChosenCharacters />
+</div>
+`;
