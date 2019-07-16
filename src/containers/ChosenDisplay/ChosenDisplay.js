@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ChosenCharacter from '../../components/ChosenCharacters'
+import ChosenCharacter from '../../components/ChosenCharacters/ChosenCharacters';
 
 export default class ChosenDisplay extends Component {
   render() {

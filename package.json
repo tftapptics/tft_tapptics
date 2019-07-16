@@ -6,8 +6,8 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.17",
     "@fortawesome/free-solid-svg-icons": "^5.8.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
-    "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.11.2",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "enzyme-to-json": "^3.3.5",
     "node-sass": "^4.11.0",
     "npm": "^6.9.0",
@@ -18,9 +18,10 @@
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "^3.0.1",
-    "redux": "^4.0.1",
+    "redux": "^4.0.4",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
+    "redux-thunks": "^1.0.0",
     "thunk": "0.0.1",
     "uniqid": "^5.0.3"
   },
@@ -50,9 +51,17 @@
     ]
   },
   "devDependencies": {
-    "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.11.2",
-    "enzyme-to-json": "^3.3.5",
     "eslint-config-airbnb": "^17.1.1"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "collectCoverageFrom": [
+      "src/components/**/*.{js,jsx}",
+      "!src/index.js",
+      "!src/setupTest.js",
+      "!src/serviceWorker.js"
+    ]
   }
 }

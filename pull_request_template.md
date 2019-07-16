@@ -1,9 +1,7 @@
 # Description
-Please include a summary of...
-+ changes and 
-+ which issue is fixed 
-+ relevant motivation and context
-+ dependencies required for change
+
+Please include a summary of the change and which issue is fixed. Please also include relevant motivation and context. List any dependencies that are required for this change.
+
 
 `Your message here`
 
@@ -21,10 +19,9 @@ Please include a summary of...
 
 - [ ] No
 - [ ] Yes
-Please describe.... 
-+ tests that you ran to verify your changes
-+ instructions so we can reproduce
-+ relevant details for your test configuration:
+
+Please describe the tests that you ran to verify your changes. Provide instructions so we can reproduce. Please also list any relevant details for your test configuration:
+
 `Your message here`
 
 
@@ -41,5 +38,6 @@ Please describe....
 - [ ] I have commented on my code, particularly in hard-to-understand areas
 
 
-Co-Authored-By: name <example@email.com>
+Co-Authored-By: Raechel Odom <odom.raechel@gmail.com>
 Co-Authored-By: Duy Vu <duyv.thanh@gmail.com>
+
