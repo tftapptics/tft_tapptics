@@ -13,7 +13,6 @@ class App extends Component {
     <div className="App">
       <header className="App-header">
         <h1>TFTapptics</h1>
-        <MainPage />
       </header>
       <Switch>
         <Route exact path="/" component={MainPage} />
