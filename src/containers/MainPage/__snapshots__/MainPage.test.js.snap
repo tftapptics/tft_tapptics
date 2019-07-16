@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainPage should match the snapshot with all the data passed in 1`] = `
+<div>
+  <ChosenDisplay />
+  <CharacterChoices />
+</div>
+`;

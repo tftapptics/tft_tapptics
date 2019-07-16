@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TeamBuilder should match the snapshot with all the data passed in 1`] = `
+<div>
+  <h1>
+    build yo team here, kiddo
+  </h1>
+</div>
+`;

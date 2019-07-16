@@ -1,13 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import MainPage from './index';
+import TeamBuilder from './TeamBuilder';
 
-describe('MainPage', () => {
+describe('TeamBuilder', () => {
 
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<MainPage/>);
+    wrapper = shallow(<TeamBuilder/>);
   });
 
   it('should match the snapshot with all the data passed in', () => {
