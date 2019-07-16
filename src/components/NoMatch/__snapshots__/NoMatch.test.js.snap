@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NoMatch should match the snapshot with the data passed in 1`] = `
+<div>
+  <img
+    alt="amumu, the sad mummuy. sorry, this page does not exist"
+    src="sad_mumu.png"
+  />
+  <h2>
+    Sorry, that page does not exist!
+  </h2>
+  <Link
+    to="/"
+  >
+    <button>
+      Back
+    </button>
+  </Link>
+</div>
+`;

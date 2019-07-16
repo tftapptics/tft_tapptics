@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match the snapshot with all the data passed in 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="App-header"
+  >
+    <h1>
+      TFTapptics
+    </h1>
+  </header>
+  <Switch>
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/team-builder"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/items"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/champions"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/synergies"
+    />
+    <Route
+      component={[Function]}
+    />
+  </Switch>
+</div>
+`;
