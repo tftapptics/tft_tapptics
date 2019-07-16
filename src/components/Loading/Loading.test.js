@@ -1,13 +1,13 @@
 import React from 'react';
-import ChosenCharacters from './ChosenCharacters';
+import Loading from './Loading';
 import { shallow } from 'enzyme';
 
-describe('ChosenCharacters', () => {
-
+describe('Loading', () => {
+  
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<ChosenCharacters />);
+    wrapper = shallow(<Loading />);
   });
 
   it('should match the snapshot with all the data passed in', () => {
