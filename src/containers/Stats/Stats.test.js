@@ -1,13 +1,14 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import MainPage from './MainPage';
+import Stats from './Stats';
 
-describe('MainPage', () => {
+describe('Stats', () => {
 
   let wrapper;
+  let mockCurrentTeam = [{name: 'Twisted Fate', health: 400, dmg: 72}]
 
   beforeEach(() => {
-    wrapper = shallow(<MainPage/>);
+    wrapper = shallow(<Stats currentTeam={mockCurrentTeam}/>);
   });
 
   it('should match the snapshot with all the data passed in', () => {

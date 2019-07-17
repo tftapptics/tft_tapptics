@@ -1,5 +1,12 @@
+@import './variables.scss';
+@import '../../containers/App/App.scss';
 @import '../../components/ChosenCharacters/ChosenCharacters';
 @import '../../containers/CharacterChoices/CharacterChoices';
 @import '../../containers/ChosenDisplay/ChosenDisplay';
-@import '../../containers/App/App.scss';
 @import '../../components/CharacterDisplay/CharacterDisplay';
+@import '../../containers/MainPage/MainPage.scss';
+@import '../../containers/Stats/Stats';
+@import '../../containers/Synergies/Synergies';
+@import '../../containers/Items/Items';
+@import '../../components/Header/Header.scss';
+@import '../../containers/Honeycomb/Honeycomb.scss';
