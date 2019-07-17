@@ -6,14 +6,13 @@ import Items from '../Items/Items';
 import TeamBuilder from '../TeamBuilder/TeamBuilder';
 import Synergies from '../Synergies/Synergies';
 import NoMatch from '../../components/NoMatch/NoMatch';
+import Header from '../../components/Header/Header';
 
 class App extends Component {
   render() {
     return (
     <div className="App">
-      <header className="App-header">
-        <h1>TFTapptics</h1>
-      </header>
+      <Header />
       <Switch>
         <Route exact path="/" component={MainPage} />
         <Route exact path="/team-builder" component={TeamBuilder} />

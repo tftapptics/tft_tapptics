@@ -8,8 +8,9 @@ export default function Stats({currentTeam}) {
     <h6>{member.dmg}</h6>
   </article>
   ))
+
   return (
-    <section>
+    <section className="Stats">
       {displayTeamStats}
     </section>
   )

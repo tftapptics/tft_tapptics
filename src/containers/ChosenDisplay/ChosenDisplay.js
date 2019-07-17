@@ -22,8 +22,8 @@ export default class ChosenDisplay extends Component {
     return (
       <div className='chosen-display'>
         <section className="choose-level">
-          <button>-</button>
           <h2>Current Level: {this.state.level}</h2>
+          <button>-</button>
           <button>+</button>
         </section>
         <section className="current-roster">

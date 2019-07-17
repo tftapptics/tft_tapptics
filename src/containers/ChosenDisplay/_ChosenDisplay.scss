@@ -6,6 +6,12 @@
 
     button {
       margin: .5rem;
+      border: 1px solid transparent;
+      background-color: $btn-bg;
+      color: $dark-bg;
+      font-size: 1rem;
+      font-weight: bolder;
+      border-radius: 3px;
     }
 
     h2 {
