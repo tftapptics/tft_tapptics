@@ -15,7 +15,6 @@ class App extends Component {
       <Header />
       <Switch>
         <Route exact path="/" component={MainPage} />
-        <Route exact path="/team-builder" component={TeamBuilder} />
         <Route exact path="/items" component={Items} />
         <Route exact path="/champions" component={Champions} />
         <Route exact path="/synergies" component={Synergies} />
