@@ -4,23 +4,12 @@ exports[`App should match the snapshot with all the data passed in 1`] = `
 <div
   className="App"
 >
-  <header
-    className="App-header"
-  >
-    <h1>
-      TFTapptics
-    </h1>
-  </header>
+  <Header />
   <Switch>
     <Route
       component={[Function]}
       exact={true}
       path="/"
-    />
-    <Route
-      component={[Function]}
-      exact={true}
-      path="/team-builder"
     />
     <Route
       component={[Function]}

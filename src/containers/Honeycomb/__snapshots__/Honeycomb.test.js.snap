@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Honeycomb should match the snapshot with all the data passed in 1`] = `
+<div
+  className="Honeycomb"
+>
+  <HexGrid
+    height={600}
+    viewBox="-50 -50 100 100"
+    width={1000}
+  >
+    <Layout
+      flat={false}
+      origin={
+        Object {
+          "x": -10,
+          "y": -10,
+        }
+      }
+      size={
+        Object {
+          "x": 12,
+          "y": 12,
+        }
+      }
+      spacing={1.1}
+    >
+      <Hexagon
+        fill="pat-1"
+        q={-1}
+        r={-1}
+        s={0}
+      />
+      <Hexagon
+        fill="pat-2"
+        q={0}
+        r={-1}
+        s={0}
+      />
+      <Hexagon
+        fill="pat-3"
+        q={1}
+        r={-1}
+        s={0}
+      />
+      <Hexagon
+        fill="pat-4"
+        q={2}
+        r={-1}
+        s={0}
+      />
+      <Hexagon
+        fill="pat-5"
+        q={-1}
+        r={0}
+        s={0}
+      />
+      <Hexagon
+        fill="pat-6"
+        q={1}
+        r={0}
+        s={0}
+      />
+      <Hexagon
+        fill="pat-7"
+        q={-2}
+        r={0}
+        s={0}
+      />
+      <Hexagon
+        fill="pat-8"
+        q={0}
+        r={0}
+        s={0}
+      />
+      <Hexagon
+        fill="pat-9"
+        q={-2}
+        r={1}
+        s={0}
+      />
+      <Hexagon
+        fill="pat-10"
+        q={-1}
+        r={1}
+        s={0}
+      />
+      <Hexagon
+        fill="pat-11"
+        q={0}
+        r={1}
+        s={0}
+      />
+      <Hexagon
+        fill="pat-12"
+        q={1}
+        r={1}
+        s={0}
+      />
+      <Path
+        end={
+          Hex {
+            "q": -2,
+            "r": 0,
+            "s": 1,
+          }
+        }
+        start={
+          Hex {
+            "q": 0,
+            "r": 0,
+            "s": 0,
+          }
+        }
+      />
+    </Layout>
+    <Pattern
+      className="pattern"
+      id="pat-1"
+      link="https://i.imgur.com/MTvNXB1.png"
+      size={
+        Point {
+          "x": 10,
+          "y": 10,
+        }
+      }
+    />
+    <Pattern
+      className=""
+      id="pat-2"
+      link="https://i.imgur.com/EkVoOjj.png"
+      size={
+        Point {
+          "x": 10,
+          "y": 10,
+        }
+      }
+    />
+  </HexGrid>
+</div>
+`;

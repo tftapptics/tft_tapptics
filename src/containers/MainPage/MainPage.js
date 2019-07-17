@@ -5,7 +5,7 @@ import CharacterChoices from '../CharacterChoices/CharacterChoices'
 export default class MainPage extends Component {
   render() {
     return (
-      <div>
+      <div className="MainPage">
         <ChosenDisplay />
         <CharacterChoices />
       </div>
