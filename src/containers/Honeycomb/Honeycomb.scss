@@ -3,4 +3,8 @@
   svg polygon {
     fill: $overlay;
   }
+
+  .pattern {
+    z-index: 5;
+  }
 }
