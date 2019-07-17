@@ -1,3 +1,32 @@
 .chosen-display {
-  background: rebeccapurple;
+
+  .choose-level {
+    margin: auto;
+    text-align: center;
+
+    button {
+      margin: .5rem;
+    }
+
+    h2 {
+      display: inline;
+      text-align: center;
+    }
+  }
+
+  .current-roster {
+    display: grid;
+    grid-template-areas: 'honey syngergy'
+    'stats synergy';
+    grid-template-rows: 3fr 1fr;
+    grid-template-columns: 80% 20%;
+
+    article {
+      text-align: center;
+    }
+  }
+
+  .Honeycomb-section {
+    grid-area: honey;
+  }
 }

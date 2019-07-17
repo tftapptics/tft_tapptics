@@ -4,9 +4,19 @@ exports[`ChosenDisplay should match the snapshot iwth all the data passed in 1`]
 <div
   className="chosen-display"
 >
-  <h2>
-    Current level:1
-  </h2>
+  <div
+    className="choose-level"
+  >
+    <button>
+      -
+    </button>
+    <h2>
+      Choose Level
+    </h2>
+    <button>
+      +
+    </button>
+  </div>
   <ChosenCharacters />
 </div>
 `;

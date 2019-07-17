@@ -1,10 +1,12 @@
 body {
-  margin: 0;
   box-sizing: border-box;
+  font-family: $body-font;
+  margin: 0;
+  height: 100vh;
 }
 
 .App {
-  background-image: url('../../assets/images/summonersrift.jpg');
+  background-image: linear-gradient($fade1, $fade2), url('../../assets/images/summonersrift.jpg');
 
   h1 {
     margin: 0;

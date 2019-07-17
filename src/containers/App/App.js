@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import MainPage from '../MainPage';
+import MainPage from '../MainPage/MainPage';
 import Champions from '../Champions/Champions';
 import Items from '../Items/Items';
 import TeamBuilder from '../TeamBuilder/TeamBuilder';
