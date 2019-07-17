@@ -6,6 +6,7 @@ import Items from '../Items/Items';
 import TeamBuilder from '../TeamBuilder/TeamBuilder';
 import Synergies from '../Synergies/Synergies';
 import NoMatch from '../../components/NoMatch/NoMatch';
+import CharacterDisplay from '../../components/CharacterDisplay/CharacterDisplay';
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
         <Route exact path="/items" component={Items} />
         <Route exact path="/champions" component={Champions} />
         <Route exact path="/synergies" component={Synergies} />
+        <Route exact path='/details' component={CharacterDisplay} />
         <Route component={NoMatch} />
       </Switch>
     </div>
