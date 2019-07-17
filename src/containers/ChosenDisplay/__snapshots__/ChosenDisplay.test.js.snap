@@ -4,19 +4,52 @@ exports[`ChosenDisplay should match the snapshot iwth all the data passed in 1`]
 <div
   className="chosen-display"
 >
-  <div
+  <section
     className="choose-level"
   >
+    <h2>
+      Current Level: 
+      0
+    </h2>
     <button>
       -
     </button>
-    <h2>
-      Choose Level
-    </h2>
     <button>
       +
     </button>
-  </div>
-  <ChosenCharacters />
+  </section>
+  <section
+    className="current-roster"
+  >
+    <section
+      className="Honeycomb-section"
+    >
+      <Honeycomb />
+    </section>
+    <article>
+      <h3>
+        Current Synergies:
+      </h3>
+      <h4>
+        YORDLE
+      </h4>
+      <h4>
+        SORCERER
+      </h4>
+    </article>
+    <section>
+      <Stats
+        currentTeam={
+          Array [
+            Object {
+              "dmg": 260,
+              "health": 400,
+              "name": "vayne",
+            },
+          ]
+        }
+      />
+    </section>
+  </section>
 </div>
 `;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import MainPage from './index';
+import MainPage from './MainPage';
 
 describe('MainPage', () => {
 
