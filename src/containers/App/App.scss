@@ -1,13 +1,6 @@
 body {
-  margin: 0;
   box-sizing: border-box;
-}
-
-.App {
-  background-image: url('../../assets/images/summonersrift.jpg');
-
-  h1 {
-    margin: 0;
-    text-align: center;
-  }
+  font-family: $body-font;
+  margin: 0;
+  height: 100vh;
 }
