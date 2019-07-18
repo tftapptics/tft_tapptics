@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function Champions() {
   return (
-    <div>
-      <h1>champions, brahski</h1>      
-    </div>
+    <section className="Champions">
+      <h3>champions, brahski</h3>    
+    </section>
   )
 }

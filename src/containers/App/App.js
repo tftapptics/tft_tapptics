@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import { Sticky, StickyContainer } from 'react-sticky';
 import MainPage from '../MainPage/MainPage';
 import Champions from '../Champions/Champions';
 import Items from '../Items/Items';

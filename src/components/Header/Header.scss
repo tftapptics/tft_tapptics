@@ -1,7 +1,9 @@
 .Header {
   background-color: $dark-bg;
   border-top: 2px solid $static-accent;
+  position: sticky;
   text-align: center;
+  top: -.5rem;
 
   img {
     color: $static-accent;
