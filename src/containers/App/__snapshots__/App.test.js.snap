@@ -5,9 +5,6 @@ exports[`App should match the snapshot with all the data passed in 1`] = `
   className="App"
 >
   <Header />
-  <div>
-    <Component />
-  </div>
   <Switch>
     <Route
       component={[Function]}
