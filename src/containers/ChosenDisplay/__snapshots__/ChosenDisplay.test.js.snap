@@ -15,8 +15,7 @@ exports[`ChosenDisplay should match the snapshot iwth all the data passed in 1`]
       className="level-btns"
     >
       <button
-        className="add-level"
-        id="up"
+        className="caret-up"
         onClick={[Function]}
       >
         <i
@@ -24,7 +23,6 @@ exports[`ChosenDisplay should match the snapshot iwth all the data passed in 1`]
         />
       </button>
       <button
-        id="down"
         onClick={[Function]}
       >
         <i

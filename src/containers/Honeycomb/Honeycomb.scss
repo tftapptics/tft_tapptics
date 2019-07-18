@@ -1,7 +1,10 @@
 .Honeycomb {
 
   svg polygon {
+    cursor: pointer;
     fill: $overlay;
+    stroke: $cell-border;
+    stroke-width: .5;
   }
 
   .pattern {
