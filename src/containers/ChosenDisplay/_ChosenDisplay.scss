@@ -41,7 +41,7 @@
   .current-roster {
     display: grid;
     grid-template-areas: 'honey stats synergy';
-    grid-template-columns: 50% 25% 25%;
+    grid-template-columns: 60% 20% 20%;
     height: 60vh;
 
     article {
@@ -54,10 +54,24 @@
   }
 
   .team-stats {
+    background-color: $overlay;
     grid-area: stats;
+    padding: .5rem;
+    width: 75%;
+
+    img {
+      display: inline-block;
+    }
   }
 
   .team-synergies {
+    background-color: $overlay;
     grid-area: synergy;
+    padding: .5rem;
+    width: 75%;
+
+    h3, h4 {
+      margin: 0 auto;
+    }
   }
 }

@@ -25,8 +25,8 @@ export default class ChosenDisplay extends Component {
         <section className="choose-level">
           <h2>Level: {this.state.level}</h2>
           <div className="level-btns">
-            <button className="add-level">+</button>
-            <button>-</button>
+            <button className="add-level"><i class="fas fa-caret-up"></i></button>
+            <button><i class="fas fa-caret-down"></i></button>
           </div>
         </section>
         <section className="current-roster">
