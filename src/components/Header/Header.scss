@@ -30,8 +30,8 @@
    
   /* Position and sizing of clickable cross button */
   .bm-cross-button {
-    height: 24px;
-    width: 24px;
+    height: 1rem;
+    width: 1rem;
   }
    
   /* Color/shape of close button cross */
@@ -50,7 +50,7 @@
 
   /* Individual item */
   .bm-item {
-    color: lighten($btn-border, 30%);
+    color: $body-font-color;
     margin: 1rem auto;
     text-decoration: none;
     display: inline-block;
