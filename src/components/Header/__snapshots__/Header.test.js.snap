@@ -55,6 +55,13 @@ exports[`Header should match the snapshot with all the data passed in 1`] = `
     >
       Synergies
     </a>
+    <a
+      className="menu-item"
+      href="/Carousel"
+      id="contact"
+    >
+      Carousel
+    </a>
   </Menu>
   <img
     alt="T.F. Tapptics"

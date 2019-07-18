@@ -60,6 +60,10 @@
       cursor: pointer;
       text-decoration: underline;
     }
+
+    &:focus {
+      outline: solid 1px $hover-accent;
+    }
   }
   
   /* Styling of overlay */
