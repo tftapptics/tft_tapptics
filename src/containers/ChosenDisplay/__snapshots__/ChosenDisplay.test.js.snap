@@ -16,11 +16,20 @@ exports[`ChosenDisplay should match the snapshot iwth all the data passed in 1`]
     >
       <button
         className="add-level"
+        id="up"
+        onClick={[Function]}
       >
-        +
+        <i
+          class="fas fa-caret-up"
+        />
       </button>
-      <button>
-        -
+      <button
+        id="down"
+        onClick={[Function]}
+      >
+        <i
+          class="fas fa-caret-down"
+        />
       </button>
     </div>
   </section>

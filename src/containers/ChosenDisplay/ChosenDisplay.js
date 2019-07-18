@@ -18,6 +18,12 @@ export default class ChosenDisplay extends Component {
       ]
     }
   }
+
+  handleClick = (e) => {
+    let level = this.state.level
+    e.target.className.includes('caret-up') ? level++ : level--
+    this.setState({level})
+  }
   
   render() {
     return (
@@ -25,8 +31,8 @@ export default class ChosenDisplay extends Component {
         <section className="choose-level">
           <h2>Level: {this.state.level}</h2>
           <div className="level-btns">
-            <button className="add-level"><i class="fas fa-caret-up"></i></button>
-            <button><i class="fas fa-caret-down"></i></button>
+            <button className="caret-up" onClick={e => this.handleClick(e)} ><i class="fas fa-caret-up"></i></button>
+            <button onClick={e => this.handleClick(e)}><i class="fas fa-caret-down"></i></button>
           </div>
         </section>
         <section className="current-roster">
