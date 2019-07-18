@@ -50,7 +50,7 @@
 
   /* Individual item */
   .bm-item {
-    color: white;
+    color: lighten($btn-border, 30%);
     margin: 1rem auto;
     text-decoration: none;
     display: inline-block;
@@ -64,6 +64,6 @@
   
   /* Styling of overlay */
   .bm-overlay {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.5);
   }
 }
