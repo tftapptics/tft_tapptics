@@ -1,0 +1,31 @@
+.carousel {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.full-car {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9) ), url('../../assets/images/tft.jpg');
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: cover;
+  box-shadow: 10px 10px 3px #3360986e;
+  border: 3px solid black;
+  text-align: center;
+}
+
+.car-title {
+  display: block;
+}
+
+.images {
+  width: 15%;
+  background: red;
+}
+
+.car-imgs {
+  width:100%;
+  height: 100%;
+}
