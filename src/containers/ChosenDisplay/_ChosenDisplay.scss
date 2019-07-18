@@ -20,6 +20,10 @@
         border: 1px solid $hover-accent;
         cursor: pointer;
       }
+
+      &:focus {
+        outline: $focus;
+      }
     }
 
     .add-level {
