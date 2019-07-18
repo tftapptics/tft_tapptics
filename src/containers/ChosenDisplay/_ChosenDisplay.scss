@@ -5,27 +5,44 @@
     text-align: center;
 
     button {
-      margin: .5rem;
-      border: 1px solid transparent;
       background-color: $btn-bg;
-      color: $dark-bg;
-      font-size: 1rem;
-      font-weight: bolder;
+      border: 1px solid $btn-border;
       border-radius: 3px;
+      color: darken($btn-border, 10%);
+      display: block;
+      font-size: .5rem;
+      font-weight: bolder;
+      height: 2vh;
+      width: 2rem;
+
+      &:hover {
+        background-color: $static-accent;
+        border: 1px solid $hover-accent;
+        cursor: pointer;
+      }
+    }
+
+    .add-level {
+      margin: .5rem 0;
     }
 
     h2 {
       display: inline;
+      font-size: 2rem;
+      margin: 0 .5rem;
       text-align: center;
+    }
+
+    .level-btns {
+      display: inline-block;
     }
   }
 
   .current-roster {
     display: grid;
-    grid-template-areas: 'honey syngergy'
-    'stats synergy';
-    grid-template-rows: 50%;
-    grid-template-columns: 80% 20%;
+    grid-template-areas: 'honey stats synergy';
+    grid-template-columns: 50% 25% 25%;
+    height: 60vh;
 
     article {
       text-align: center;
@@ -34,5 +51,13 @@
 
   .Honeycomb-section {
     grid-area: honey;
+  }
+
+  .team-stats {
+    grid-area: stats;
+  }
+
+  .team-synergies {
+    grid-area: synergy;
   }
 }

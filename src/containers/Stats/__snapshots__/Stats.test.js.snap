@@ -5,6 +5,9 @@ exports[`Stats should match the snapshot with all the data passed in 1`] = `
   className="Stats"
 >
   <article>
+    <img
+      alt="Twisted Fate portrait"
+    />
     <h5>
       Twisted Fate
     </h5>

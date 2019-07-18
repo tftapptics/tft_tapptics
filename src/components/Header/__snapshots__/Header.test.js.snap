@@ -4,8 +4,9 @@ exports[`Header should match the snapshot with all the data passed in 1`] = `
 <div
   className="Header"
 >
-  <h1>
-    TFTapptics
-  </h1>
+  <img
+    alt="T.F. Tapptics"
+    src="header-logo.png"
+  />
 </div>
 `;

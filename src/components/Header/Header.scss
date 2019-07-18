@@ -1,9 +1,12 @@
 .Header {
+  background-color: $dark-bg;
+  border-top: 2px solid $static-accent;
+  text-align: center;
 
-  h1 {
-    background-color: $dark-bg;
-    margin: 0 auto;
-    color: white;
-    text-align: center;
+  img {
+    color: $static-accent;
+    margin: auto;
+    padding-top: 2px;
+    width: 15rem;
   }
 }
