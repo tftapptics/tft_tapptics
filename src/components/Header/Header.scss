@@ -1,9 +1,73 @@
 .Header {
+  background-color: $dark-bg;
+  border-top: 2px solid $static-accent;
+  text-align: center;
 
-  h1 {
-    background-color: $dark-bg;
-    margin: 0 auto;
-    color: white;
-    text-align: center;
+  img {
+    color: $static-accent;
+    margin: auto;
+    padding-top: 2px;
+    width: 15rem;
+  }
+
+  .bm-burger-button {
+    position: fixed;
+    width: 36px;
+    height: 30px;
+    left: 36px;
+    top: 36px;
+  }
+   
+  /* Color/shape of burger icon bars */
+  .bm-burger-bars {
+    background: $static-accent;
+  }
+   
+  /* Color/shape of burger icon bars on hover*/
+  .bm-burger-bars-hover {
+    background: $hover-accent;
+  }
+   
+  /* Position and sizing of clickable cross button */
+  .bm-cross-button {
+    height: 1rem;
+    width: 1rem;
+  }
+   
+  /* Color/shape of close button cross */
+  .bm-cross {
+    background: $static-accent;
+  }
+
+  /* General sidebar styles */
+  .bm-menu {
+    background: $dark-bg;
+    border-right: 2px solid $static-accent;
+    box-shadow: 3px 3px 3px $fade1;
+    font-size: 1.15em;
+    padding: 2.5em 1.5em 0;
+  }
+
+  /* Individual item */
+  .bm-item {
+    color: $body-font-color;
+    margin: 1rem auto;
+    text-decoration: none;
+    display: inline-block;
+
+    &:hover {
+      color: $static-accent;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    &:focus {
+      outline: solid 1px $hover-accent;
+    }
+  }
+  
+  /* Styling of overlay */
+  .bm-overlay {
+    background: rgba(0, 0, 0, 0.5);
   }
 }

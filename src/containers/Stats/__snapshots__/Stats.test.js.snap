@@ -5,15 +5,22 @@ exports[`Stats should match the snapshot with all the data passed in 1`] = `
   className="Stats"
 >
   <article>
-    <h5>
-      Twisted Fate
-    </h5>
-    <h6>
-      400
-    </h6>
-    <h6>
-      72
-    </h6>
+    <img
+      alt="Twisted Fate portrait"
+    />
+    <div>
+      <h5>
+        Twisted Fate
+      </h5>
+      <h6>
+        Health: 
+        400
+      </h6>
+      <h6>
+        Damage: 
+        72
+      </h6>
+    </div>
   </article>
 </section>
 `;

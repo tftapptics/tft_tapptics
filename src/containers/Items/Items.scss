@@ -3,4 +3,11 @@
   background-size: cover;
   background-repeat: none;
   height: 100vh;
+  padding: 1rem;
+
+  h3 {
+    color: $body-font-color;
+    font-size: 1.5rem;
+    margin: 0;
+  }
 }

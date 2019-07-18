@@ -3,9 +3,12 @@ import React from 'react'
 export default function Stats({currentTeam}) {
   let displayTeamStats = currentTeam.map(member => (
   <article>
-    <h5>{member.name}</h5>
-    <h6>{member.health}</h6>
-    <h6>{member.dmg}</h6>
+    <img src={member.img} alt={`${member.name} portrait`} />
+    <div>
+      <h5>{member.name}</h5>
+      <h6>Health: {member.health}</h6>
+      <h6>Damage: {member.dmg}</h6>
+    </div>
   </article>
   ))
 

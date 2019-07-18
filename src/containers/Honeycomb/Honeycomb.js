@@ -9,6 +9,7 @@ export default class Honeycomb extends Component {
           <Layout size={{ x: 12, y: 12 }} flat={false} spacing={1.1} origin={{ x: -10, y: -10 }}>
             <Hexagon q={-1} r={-1} s={0} fill="pat-1"  />
             <Hexagon q={0} r={-1} s={0} fill="pat-2" />
+            {/* put text inside hexagons for the star upgrade buttons */}
             <Hexagon q={1} r={-1} s={0} fill="pat-3"/>
             <Hexagon q={2} r={-1} s={0} fill="pat-4" />
             <Hexagon q={-1} r={0} s={0} fill="pat-5" />
