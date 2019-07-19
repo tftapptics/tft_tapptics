@@ -36,9 +36,31 @@ describe('fetchChampions', () => {
     expect(mockDispatch).toHaveBeenCalledWith(isLoading(true));
   });
 
+  it.skip('should dispatch setChampions is the response is okay', async () => {
+    await thunk(mockDispatch);
+    const mockState = {champions: [{name: 'Yasuo'}] }
+
+    const actionToDispatch = setChampions(mockState);
+    const mappedProps = mapDispatchToProps(mockDispatch);
+    mappedProps.setChampions(mockState);
+    expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
+  })
+
   it('should dispatch isLoading(false)', async () => {
     await thunk(mockDispatch);
 
     expect(mockDispatch).toHaveBeenCalledWith(isLoading(false));
   });
+
+  it('should dispatch an error if the response is not okay', async () => {
+    window.fetch = jest.fn().mockImplementation(() => {
+      return Promise.resolve({
+        ok: false,
+        statusText: 'Something went wrong'
+      })
+    })
+    await thunk(mockDispatch);
+    expect(mockDispatch).toHaveBeenCalledWith(setError('Something went wrong'))
+  });
+
 })
