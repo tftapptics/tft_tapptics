@@ -1,0 +1,31 @@
+.NoMatch {
+  background-color: $dark-bg;
+  display: grid;
+  grid-template-areas: "back img";
+  grid-template-columns: 50% 50%;
+
+  img {
+    grid-area: img;
+    margin: auto;
+  }
+
+  div {
+    color: $body-font-color;
+    grid-area: back;
+    margin: auto;
+    text-align: center;
+
+    button {
+      background-color: $btn-bg;
+      border: 1px solid $btn-border;
+      border-radius: 3px;
+      color: $btn-border;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $btn-border;
+        color: $btn-bg;
+      }
+    }
+  }
+}

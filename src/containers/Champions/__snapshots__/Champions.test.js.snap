@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Champions should match the snapshot with all the data passed in 1`] = `
-<div>
-  <h1>
+<section
+  className="Champions"
+>
+  <h3>
     champions, brahski
-  </h1>
-</div>
+  </h3>
+</section>
 `;
