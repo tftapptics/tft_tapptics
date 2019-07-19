@@ -61,7 +61,7 @@
       "enzyme-to-json/serializer"
     ],
     "collectCoverageFrom": [
-      "src/components/**/*.{js,jsx}",
+      "src/**/*.{js,jsx}",
       "!src/index.js",
       "!src/setupTest.js",
       "!src/serviceWorker.js"

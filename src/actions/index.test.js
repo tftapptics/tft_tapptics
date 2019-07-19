@@ -15,4 +15,11 @@ describe('actions', () => {
 
     expect(result).toEqual(expected);
   });
+
+  it('should return all champions', () => {
+    const expected = {type: 'SET_CHAMPIONS', champs: {name: 'Warwick'}};
+    const result = actions.setChampions({name: 'Warwick'});
+
+    expect(result).toEqual(expected);
+  })
 });
