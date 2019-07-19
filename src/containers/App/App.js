@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
-import MainPage from '../MainPage/MainPage';
 import Champions from '../Champions/Champions';
 import Items from '../Items/Items';
 import Synergies from '../Synergies/Synergies';
@@ -18,8 +17,8 @@ class App extends Component {
   componentDidMount() {
     // this.props.fetchChampions('https://tft-backend.herokuapp.com/api/v1/champions')
     fetch('https://tft-backend.herokuapp.com/api/v1/champions')
+    .then(res => res.json())
     .then(res => console.log(res))
-
   }
   
 
