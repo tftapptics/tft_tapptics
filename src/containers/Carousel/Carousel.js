@@ -49,7 +49,7 @@ class Carousel extends Component {
               <span>BELIEVE ME YET!??</span>
           </ReactTooltip>
         </div>
-        <InitialCharacter />
+        {/* <InitialCharacter /> */}
       </div>
       </div>
     )
