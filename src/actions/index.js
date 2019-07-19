@@ -7,3 +7,8 @@ export const setError = message => ({
   type: 'SET_ERROR',
   message
 })
+
+export const setChampions = champs => ({
+  type: 'SET_CHAMPIONS',
+  champs
+})
