@@ -2,6 +2,12 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  border: 2px solid #3b3b3b;
+  padding: 35px;
+  width: 80%;
+  border-radius: 10px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  box-shadow: 9px 9px 16px #4d405a78;
 }
 
 .full-car {
@@ -14,18 +20,33 @@
   box-shadow: 10px 10px 3px #3360986e;
   border: 3px solid black;
   text-align: center;
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .car-title {
-  display: block;
+  color: #bfa784;
+  text-shadow: 6px 6px 5px #090909;
 }
 
 .images {
   width: 15%;
-  background: red;
+  // background: red;
+  height: 7rem;
 }
 
 .car-imgs {
-  width:100%;
+  width: 4rem;
   height: 100%;
+  transition: 1.5s;
+  opacity: 0.7;
+  filter: drop-shadow(2px 2px 9px #673AB7) drop-shadow(-2px -2px 17px white);
+  &:hover {
+    filter: drop-shadow(2px 2px 9px white) drop-shadow(-2px -2px 17px red);
+    cursor: pointer;
+    opacity: 1;
+  }
 }
+
