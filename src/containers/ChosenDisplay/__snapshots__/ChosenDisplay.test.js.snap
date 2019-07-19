@@ -69,5 +69,6 @@ exports[`ChosenDisplay should match the snapshot iwth all the data passed in 1`]
       </h4>
     </article>
   </section>
+  <HoneycombDrag />
 </div>
 `;
