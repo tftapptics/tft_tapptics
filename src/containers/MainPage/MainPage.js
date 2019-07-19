@@ -7,7 +7,7 @@ export default class MainPage extends Component {
     return (
       <div className="MainPage">
         <ChosenDisplay />
-        <CharacterChoices />
+        {/* <CharacterChoices /> */}
       </div>
     )
   }

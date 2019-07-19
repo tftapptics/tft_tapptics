@@ -8,6 +8,7 @@ import NoMatch from '../../components/NoMatch/NoMatch';
 import CharacterDisplay from '../../components/CharacterDisplay/CharacterDisplay';
 import Header from '../../components/Header/Header';
 import Carousel from '../Carousel/Carousel'
+import ChosenDisplay from '../ChosenDisplay/ChosenDisplay';
 
 
 class App extends Component {
@@ -18,7 +19,7 @@ class App extends Component {
     <div className="App">
       <Header />
       <Switch>
-        <Route exact path="/" component={MainPage} />
+        <Route exact path="/" component={ChosenDisplay} />
         <Route exact path="/items" component={Items} />
         <Route exact path="/champions" component={Champions} />
         <Route exact path="/synergies" component={Synergies} />
