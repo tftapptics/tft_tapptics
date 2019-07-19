@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Honeycomb should match the snapshot with all the data passed in 1`] = `
-<section
+<div
   className="Honeycomb"
 >
   <HexGrid
-    height={600}
+    height={500}
     viewBox="-50 -50 100 100"
     width={1000}
   >
@@ -19,8 +19,8 @@ exports[`Honeycomb should match the snapshot with all the data passed in 1`] = `
       }
       size={
         Object {
-          "x": 12,
-          "y": 12,
+          "x": 13,
+          "y": 13,
         }
       }
       spacing={1.1}
@@ -137,5 +137,5 @@ exports[`Honeycomb should match the snapshot with all the data passed in 1`] = `
       }
     />
   </HexGrid>
-</section>
+</div>
 `;

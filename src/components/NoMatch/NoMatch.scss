@@ -3,6 +3,7 @@
   display: grid;
   grid-template-areas: "back img";
   grid-template-columns: 50% 50%;
+  height: $page-height;
 
   img {
     grid-area: img;

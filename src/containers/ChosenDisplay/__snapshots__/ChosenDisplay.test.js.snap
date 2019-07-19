@@ -38,6 +38,7 @@ exports[`ChosenDisplay should match the snapshot iwth all the data passed in 1`]
       className="Honeycomb-section"
     >
       <Honeycomb />
+      <HoneycombDrag />
     </section>
     <article
       className="team-stats"
@@ -69,6 +70,5 @@ exports[`ChosenDisplay should match the snapshot iwth all the data passed in 1`]
       </h4>
     </article>
   </section>
-  <HoneycombDrag />
 </div>
 `;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ChosenCharacter from '../../components/ChosenCharacters/ChosenCharacters';
+import { HexGrid } from 'react-hexgrid';
 import Honeycomb from '../Honeycomb/Honeycomb';
 import HoneycombDrag from '../HoneycombDrag/HoneycombDrag';
 import Stats from '../Stats/Stats';
@@ -38,7 +38,10 @@ export default class ChosenDisplay extends Component {
         </section>
         <section className="current-roster">
           <section className="Honeycomb-section">
-            <Honeycomb />
+            {/* <HexGrid width={1000} height={600} viewBox="-50 -50 100 100"> */}
+              <Honeycomb />
+              <HoneycombDrag />
+            {/* </HexGrid> */}
           </section>
           <article className="team-stats">
             <Stats currentTeam={this.state.currentTeam} />
@@ -49,8 +52,6 @@ export default class ChosenDisplay extends Component {
             <h4>SORCERER</h4>
           </article>
         </section>
-        <HoneycombDrag />
-        {/* <ChosenCharacter /> */}
       </div>
     )
   }
