@@ -5,33 +5,6 @@ exports[`ChosenDisplay should match the snapshot iwth all the data passed in 1`]
   className="chosen-display"
 >
   <section
-    className="choose-level"
-  >
-    <h2>
-      Level: 
-      0
-    </h2>
-    <div
-      className="level-btns"
-    >
-      <button
-        className="caret-up"
-        onClick={[Function]}
-      >
-        <i
-          class="fas fa-caret-up"
-        />
-      </button>
-      <button
-        onClick={[Function]}
-      >
-        <i
-          class="fas fa-caret-down"
-        />
-      </button>
-    </div>
-  </section>
-  <section
     className="current-roster"
   >
     <section

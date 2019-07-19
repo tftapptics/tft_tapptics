@@ -8,7 +8,6 @@ export default class ChosenDisplay extends Component {
   constructor() {
     super();
     this.state = {
-      level: 0,
       currentTeam: [
         {
           name: 'vayne',
@@ -19,23 +18,10 @@ export default class ChosenDisplay extends Component {
       ]
     }
   }
-
-  handleClick = (e) => {
-    let level = this.state.level
-    e.target.className.includes('caret-up') ? level++ : level--
-    this.setState({level})
-  }
   
   render() {
     return (
       <div className='chosen-display'>
-        <section className="choose-level">
-          <h2>Level: {this.state.level}</h2>
-          <div className="level-btns">
-            <button className="caret-up" onClick={e => this.handleClick(e)} ><i class="fas fa-caret-up"></i></button>
-            <button onClick={e => this.handleClick(e)}><i class="fas fa-caret-down"></i></button>
-          </div>
-        </section>
         <section className="current-roster">
           <section className="Honeycomb-section">
             {/* <HexGrid width={1000} height={600} viewBox="-50 -50 100 100"> */}
