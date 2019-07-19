@@ -1,0 +1,8 @@
+.HoneycombDrag {
+  
+  svg polygon {
+    fill: $overlay;
+    stroke: $cell-border;
+    stroke-width: .5;
+  }
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ChosenCharacter from '../../components/ChosenCharacters/ChosenCharacters';
 import Honeycomb from '../Honeycomb/Honeycomb';
+import HoneycombDrag from '../HoneycombDrag/HoneycombDrag';
 import Stats from '../Stats/Stats';
 
 export default class ChosenDisplay extends Component {
@@ -48,6 +49,7 @@ export default class ChosenDisplay extends Component {
             <h4>SORCERER</h4>
           </article>
         </section>
+        <HoneycombDrag />
         {/* <ChosenCharacter /> */}
       </div>
     )

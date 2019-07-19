@@ -4,7 +4,7 @@ import { HexGrid, Layout, Hexagon, Text, Pattern, Path, Hex } from 'react-hexgri
 export default class Honeycomb extends Component {
   render() {
     return (
-      <div className="Honeycomb">
+      <section className="Honeycomb">
         <HexGrid width={1000} height={600} viewBox="-50 -50 100 100">
           <Layout size={{ x: 12, y: 12 }} flat={false} spacing={1.1} origin={{ x: -10, y: -10 }}>
             <Hexagon q={-1} r={-1} s={0} fill="pat-1"  />
@@ -25,7 +25,7 @@ export default class Honeycomb extends Component {
           <Pattern className="pattern" id="pat-1" link="https://i.imgur.com/MTvNXB1.png" />
           <Pattern id="pat-2" link="https://i.imgur.com/EkVoOjj.png" className="" />
         </HexGrid>
-      </div>
+      </section>
     )
   }
 }
