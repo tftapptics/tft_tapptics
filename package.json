@@ -22,7 +22,6 @@
     "react-scripts": "^3.0.1",
     "react-tooltip": "^3.10.0",
     "redux": "^4.0.4",
-    "redux-burger-menu": "^0.2.8",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
     "redux-thunks": "^1.0.0",
