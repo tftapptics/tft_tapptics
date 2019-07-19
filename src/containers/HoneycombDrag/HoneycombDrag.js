@@ -6,7 +6,7 @@ export default class HoneycombDrag extends Component {
     return (
       <section className="HoneycombDrag">
         <HexGrid width={1000} height={250} viewBox="-50 -50 100 100">
-          <Layout size={{ x: 8, y: 8 }} flat={false} spacing={1.1} origin={{ x: 0, y: 0 }}>
+          <Layout size={{ x: 9, y: 9 }} flat={false} spacing={1.1} origin={{ x: -10, y: -10 }}>
             <Hexagon q={-6} r={-2} s={0}  />
             <Hexagon q={-5} r={-2} s={0}  />
             <Hexagon q={-4} r={-2} s={0}  />
