@@ -37,14 +37,8 @@ exports[`ChosenDisplay should match the snapshot iwth all the data passed in 1`]
     <section
       className="Honeycomb-section"
     >
-      <HexGrid
-        height={600}
-        viewBox="-50 -50 100 100"
-        width={1000}
-      >
-        <Honeycomb />
-        <HoneycombDrag />
-      </HexGrid>
+      <Honeycomb />
+      <HoneycombDrag />
     </section>
     <article
       className="team-stats"
