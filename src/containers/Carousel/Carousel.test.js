@@ -1,10 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Carousel } from './Carousel';
+import { Carousel, mapStateToProps } from './Carousel';
 
-describe('Carousel', () => {
 
-  let wrapper;
   let mockChamps = [{
     "id": "1",
     "type": "champions",
@@ -94,12 +92,20 @@ describe('Carousel', () => {
         }
     }
 }]
+describe('Carousel', () => {
 
-  beforeEach(() => {
-    wrapper = shallow(<Carousel champions={mockChamps}/>);
+  describe('Container', () => {
+    let wrapper;
+    beforeEach(() => {
+      wrapper = shallow(<Carousel champions={mockChamps}/>);
+    });
+
+    it('should match the snapshot with all the data passed in', () => {
+      expect(wrapper).toMatchSnapshot();
+    });
   });
 
-  it('should match the snapshot with all the data passed in', () => {
-    expect(wrapper).toMatchSnapshot();
+  describe('mapStateToProps', () => {
+
   });
 });
