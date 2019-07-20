@@ -38,12 +38,8 @@ class App extends Component {
   }
 }
 
-export const mapStateToProps = state => ({
-  champions: state.champions
-});
-
 export const mapDispatchToProps = dispatch => ({
   fetchChampions: url => dispatch(fetchChampions(url))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(null, mapDispatchToProps)(App);

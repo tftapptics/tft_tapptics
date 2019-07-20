@@ -3,8 +3,9 @@ import { HexGrid } from 'react-hexgrid';
 import Honeycomb from '../Honeycomb/Honeycomb';
 import HoneycombDrag from '../HoneycombDrag/HoneycombDrag';
 import Stats from '../Stats/Stats';
+import { connect } from 'react-redux';
 
-export default class ChosenDisplay extends Component {
+class ChosenDisplay extends Component {
   constructor() {
     super();
     this.state = {
@@ -24,10 +25,10 @@ export default class ChosenDisplay extends Component {
       <div className='chosen-display'>
         <section className="current-roster">
           <section className="Honeycomb-section">
-            {/* <HexGrid width={1000} height={600} viewBox="-50 -50 100 100"> */}
+            <HexGrid class="grid" width={1000} height={600} viewBox="-50 -50 100 100">
               <Honeycomb />
-              <HoneycombDrag />
-            {/* </HexGrid> */}
+              <HoneycombDrag champions={this.props.champions}  />
+            </HexGrid>
           </section>
           <article className="team-stats">
             <Stats currentTeam={this.state.currentTeam} />
@@ -42,3 +43,9 @@ export default class ChosenDisplay extends Component {
     )
   }
 }
+
+export const mapStateToProps = state => ({
+  champions: state.champions
+});
+
+export default connect(mapStateToProps)(ChosenDisplay);

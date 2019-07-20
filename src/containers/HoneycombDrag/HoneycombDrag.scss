@@ -5,4 +5,14 @@
     stroke: $cell-border;
     stroke-width: .5;
   }
+
+  .hex-text {
+    fill: white;
+    font-size: .10em;
+    fill-opacity: .7;
+
+    &:hover {
+      fill-opacity: 1;
+    }
+  }
 }
