@@ -14,18 +14,3 @@ exports[`Carousel Container should match the snapshot with all the data passed i
   />
 </div>
 `;
-
-exports[`Carousel should match the snapshot with all the data passed in 1`] = `
-<div
-  className="full-car"
->
-  <h1
-    className="car-title"
-  >
-    Choose A Champion
-  </h1>
-  <div
-    className="carousel"
-  />
-</div>
-`;
