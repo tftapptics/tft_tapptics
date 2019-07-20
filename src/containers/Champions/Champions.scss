@@ -10,4 +10,28 @@
     font-size: 1.5rem;
     margin: 0;
   }
+
+  .display-champs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: left;
+    overflow: scroll;
+    height: 80vh;
+
+    article {
+      display: inline;
+      margin: 1rem;
+    }
+  }
+}
+
+.display-modal {
+  display: grid;
+  grid-template-areas: ". . x"
+  "img info cost"
+  "img info range"
+  "stats stats stats"
+  "p-img p-info p-info";
+  grid-template-rows: .5fr 2fr 1fr 1.5fr;
 }
