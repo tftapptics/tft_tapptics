@@ -6,7 +6,8 @@ export const fetchChampions = url => {
     try {
       dispatch(isLoading(true))
       const data = await fetchData(url);
-      dispatch(setChampions(data))
+      console.log(data)
+      dispatch(setChampions(data.data))
       dispatch(isLoading(false))
     } catch (error) {
       dispatch(setError(error.message))

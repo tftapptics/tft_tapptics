@@ -8,6 +8,7 @@
   height: 100%;
   transition: 1.5s;
   opacity: 0.7;
+  margin-bottom: 10px; 
   filter: drop-shadow(2px 2px 9px #673AB7) drop-shadow(-2px -2px 17px white);
   &:hover {
     filter: drop-shadow(2px 2px 9px white) drop-shadow(-2px -2px 17px red);
