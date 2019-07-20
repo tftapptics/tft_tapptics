@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Modal from 'react-modal';
+import ReactModal from 'react-modal';
 
 
 class Champions extends Component {
@@ -13,7 +13,7 @@ class Champions extends Component {
           data: {
             health: [],
             ability_info: {
-              attributes: [{damage: [] }],
+              attributes: [{damage: [], totaldamage: [] }],
             },
           },
           origin_class_type: {
@@ -42,7 +42,7 @@ class Champions extends Component {
         data: {
           health: [],
           ability_info: {
-            attributes: [{damage: [] }],
+            attributes: [{damage: [], totaldamage: []}],
           },
         },
         origin_class_type: {
@@ -71,26 +71,31 @@ class Champions extends Component {
 
     let displayModal = (
       <article className="display-modal">
-        <button className="update-modal" onClick={this.handleCloseModal}>X</button>
-        <img src={this.state.currentChampion.attributes.data.champion_thumbnail} />
-        <h3><i class="fas fa-coins"></i> {this.state.currentChampion.attributes.data.name}</h3>
-        <h5>{this.state.currentChampion.attributes.data.cost}</h5>
+        <button className="x-btn" onClick={this.handleCloseModal}>X</button>
+        <img src={this.state.currentChampion.attributes.data.champion_thumbnail} alt={this.state.currentChampion.attributes.data.name} className="modal-thumbnail" />
+        <h3>{this.state.currentChampion.attributes.data.name}</h3>
+        <h5 className="modal-cost"><i class="fas fa-coins"></i>  {this.state.currentChampion.attributes.data.cost}</h5>
+        <p className="modal-range">{this.state.currentChampion.attributes.data.range}</p>
         <div className="modal-class-origin">
           {this.state.currentChampion.attributes.origin_class_type.data.map(i => 
             (<img src={i.attributes.data.thumbnail} alt={i.attributes.data.name} />)
           )}
           </div>
         <h5>Health: {this.state.currentChampion.attributes.data.health[0]} / {this.state.currentChampion.attributes.data.health[1]} / {this.state.currentChampion.attributes.data.health[2]}</h5>
-        <h5>Damage: {this.state.currentChampion.attributes.data.dmg}</h5>
-        <h5>Attack Speed: {this.state.currentChampion.attributes.data.atk_spd}</h5>
-        <h5>Magic Resistance: {this.state.currentChampion.attributes.data.mr}</h5>
-        <h5>Armor: {this.state.currentChampion.attributes.data.armor}</h5>
-        <p>{this.state.currentChampion.attributes.data.range}</p>
-        <section className="section-passive">
-          <h4>{this.state.currentChampion.attributes.data.ability_info.title}</h4>
-          <img src={this.state.currentChampion.attributes.data.ability_thumbnail} alt={this.state.currentChampion.attributes.data.ability_info.title} />
-          <p>{this.state.currentChampion.attributes.data.ability_info.descrption}</p>
-          <p>Damage: {this.state.currentChampion.attributes.data.ability_info.attributes[0].damage[0]} / {this.state.currentChampion.attributes.data.ability_info.attributes[0].damage[1]} / {this.state.currentChampion.attributes.data.ability_info.attributes[0].damage[2]}</p>
+        <div className="modal-stats">
+          <h5 className="modal-stat">Damage: {this.state.currentChampion.attributes.data.dmg}</h5>
+          <h5 className="modal-stat">Attack Speed: {this.state.currentChampion.attributes.data.atk_spd}</h5>
+          <h5 className="modal-stat">Magic Resistance: {this.state.currentChampion.attributes.data.mr}</h5>
+          <h5 className="modal-stat">Armor: {this.state.currentChampion.attributes.data.armor}</h5>
+        </div>
+        <img src={this.state.currentChampion.attributes.data.ability_thumbnail}
+        alt={this.state.currentChampion.attributes.data.ability_name}
+        className="modal-p-thumbnail" />
+        <section className="modal-p-info">
+          <div>
+            <h5>{this.state.currentChampion.attributes.data.ability_name}</h5>
+            <p>{this.state.currentChampion.attributes.data.ability_info}</p>
+          </div>
         </section>
       </article>)
 
@@ -99,15 +104,16 @@ class Champions extends Component {
       <section className="Champions">
         <h3>All Champions</h3>
         <section className="display-champs">
-        {displayChampions}
+          {displayChampions}
         </section>
-        <Modal 
+        <ReactModal
            isOpen={this.state.showModal}
+           className="Modal"
            contentLabel="Champion Modal">
            <div className="modal-display-champions">
-          { this.state.showModal && displayModal }
+            { this.state.showModal && displayModal }
           </div>
-        </Modal>
+        </ReactModal>
       </section>
     )
   }

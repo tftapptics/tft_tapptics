@@ -21,17 +21,74 @@
 
     article {
       display: inline;
-      margin: 1rem;
+      margin: .75rem;
     }
   }
 }
 
-.display-modal {
-  display: grid;
-  grid-template-areas: ". . x"
-  "img info cost"
-  "img info range"
-  "stats stats stats"
-  "p-img p-info p-info";
-  grid-template-rows: .5fr 2fr 1fr 1.5fr;
+.Modal {
+  background: $medium-bg;
+  box-shadow: 2px 2px 2px darken($dark-bg, 20%);
+  color: $btn-bg;
+  height: 55%;
+  margin: auto;
+  padding: 1.5rem;
+  position: relative;
+  bottom: -20%;
+  width: 65%;
+
+  button {
+    background-color: $dark-bg;
+    border: 1px solid $btn-border;
+    border-radius: 25px;
+    color: $btn-bg;
+    font-size: 1.25rem;
+    grid-area: x;
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .modal-display-champions {
+    height: 50%;
+    // margin: auto;
+    // width: 60%;
+  }
+
+  .display-modal {
+    display: grid;
+    grid-template-areas: ". . x"
+    "img info cost"
+    "img info range"
+    "stats stats stats"
+    "p-img p-info p-info";
+    grid-template-rows: .5fr 2fr 1fr 1.5fr;
+    height: 40%;
+  
+    .modal-range {
+      grid-area: range;
+    }
+  
+    .modal-cost {
+      grid-area: cost;
+    }
+
+    .modal-stats {
+      grid-area: stats;
+      display: flex;
+      justify-content: space-around;
+    }
+  
+    .modal-thumbnail {
+      grid-area: img;
+    }
+
+    .modal-p-thumbnail {
+      grid-area: p-img;
+      margin: auto;
+    }
+
+    .modal-p-info {
+      grid-area: p-info;
+    }
+  }
 }
