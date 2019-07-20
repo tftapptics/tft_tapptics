@@ -12,3 +12,8 @@ export const setChampions = champs => ({
   type: 'SET_CHAMPIONS',
   champs
 })
+
+export const setRoster = champ => ({
+  type: 'SET_ROSTER',
+  champ
+})
