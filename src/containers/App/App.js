@@ -12,7 +12,7 @@ import ChosenDisplay from '../ChosenDisplay/ChosenDisplay';
 import { fetchChampions } from '../../thunks/fetchChampions';
 
 
-class App extends Component {
+export class App extends Component {
 
   componentDidMount() {
     this.props.fetchChampions('https://tft-backend.herokuapp.com/api/v1/champions')
