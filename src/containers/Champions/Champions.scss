@@ -50,36 +50,51 @@
 
   .modal-display-champions {
     height: 50%;
-    // margin: auto;
-    // width: 60%;
   }
 
   .display-modal {
     display: grid;
-    grid-template-areas: ". . x"
-    "img info cost"
-    "img info range"
-    "stats stats stats"
-    "p-img p-info p-info";
-    grid-template-rows: .5fr 2fr 1fr 1.5fr;
-    height: 40%;
+    grid-template-areas:
+    "img name cost x"
+    "img class range ."
+    "health stats stats ."
+    "p-img p-info p-info .";
+    grid-template-rows: .5fr .5fr .5fr 1.5fr;
+    height: 200%;
+    overflow: scroll;
   
     .modal-range {
       grid-area: range;
     }
+
+    .modal-name {
+      grid-area: name;
+    }
+
+    .modal-class-origin {
+      grid-area: class;
+      margin: auto;
+    }
   
     .modal-cost {
       grid-area: cost;
+      margin: auto;
+    }
+
+    .modal-health {
+      grid-area: health;
     }
 
     .modal-stats {
       grid-area: stats;
-      display: flex;
+      display: inline-flex;
+      flex-wrap: wrap;
       justify-content: space-around;
     }
   
     .modal-thumbnail {
       grid-area: img;
+      margin: auto;
     }
 
     .modal-p-thumbnail {
@@ -87,8 +102,16 @@
       margin: auto;
     }
 
+    .modal-p-name {
+      grid-area: p-name;
+    }
+
     .modal-p-info {
       grid-area: p-info;
+    }
+
+    h5 {
+      font-weight: 400;
     }
   }
 }

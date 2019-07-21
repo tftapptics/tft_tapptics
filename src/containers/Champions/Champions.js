@@ -73,15 +73,15 @@ class Champions extends Component {
       <article className="display-modal">
         <button className="x-btn" onClick={this.handleCloseModal}>X</button>
         <img src={this.state.currentChampion.attributes.data.champion_thumbnail} alt={this.state.currentChampion.attributes.data.name} className="modal-thumbnail" />
-        <h3>{this.state.currentChampion.attributes.data.name}</h3>
+        <h3 className="modal-name">{this.state.currentChampion.attributes.data.name}</h3>
         <h5 className="modal-cost"><i class="fas fa-coins"></i>  {this.state.currentChampion.attributes.data.cost}</h5>
-        <p className="modal-range">{this.state.currentChampion.attributes.data.range}</p>
+        <p className="modal-range">Range: {this.state.currentChampion.attributes.data.range}</p>
         <div className="modal-class-origin">
           {this.state.currentChampion.attributes.origin_class_type.data.map(i => 
             (<img src={i.attributes.data.thumbnail} alt={i.attributes.data.name} />)
           )}
           </div>
-        <h5>Health: {this.state.currentChampion.attributes.data.health[0]} / {this.state.currentChampion.attributes.data.health[1]} / {this.state.currentChampion.attributes.data.health[2]}</h5>
+        <h5 className="modal-health">Health: {this.state.currentChampion.attributes.data.health[0]} / {this.state.currentChampion.attributes.data.health[1]} / {this.state.currentChampion.attributes.data.health[2]}</h5>
         <div className="modal-stats">
           <h5 className="modal-stat">Damage: {this.state.currentChampion.attributes.data.dmg}</h5>
           <h5 className="modal-stat">Attack Speed: {this.state.currentChampion.attributes.data.atk_spd}</h5>
@@ -89,13 +89,11 @@ class Champions extends Component {
           <h5 className="modal-stat">Armor: {this.state.currentChampion.attributes.data.armor}</h5>
         </div>
         <img src={this.state.currentChampion.attributes.data.ability_thumbnail}
-        alt={this.state.currentChampion.attributes.data.ability_name}
-        className="modal-p-thumbnail" />
+          alt={this.state.currentChampion.attributes.data.ability_name}
+          className="modal-p-thumbnail" />
         <section className="modal-p-info">
-          <div>
-            <h5>{this.state.currentChampion.attributes.data.ability_name}</h5>
-            <p>{this.state.currentChampion.attributes.data.ability_info}</p>
-          </div>
+          <h4 className="modal-p-name">{this.state.currentChampion.attributes.data.ability_name}</h4>
+          <p className="modal-p-info">{this.state.currentChampion.attributes.data.ability_info}</p>
         </section>
       </article>)
 
