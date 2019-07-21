@@ -36,7 +36,7 @@ describe('fetchChampions', () => {
     expect(mockDispatch).toHaveBeenCalledWith(isLoading(true));
   });
 
-  it.skip('should dispatch setChampions is the response is okay', async () => {
+  it.skip('should dispatch setChampions if the response is okay', async () => {
     await thunk(mockDispatch);
     const mockState = {champions: [{name: 'Yasuo'}] }
 

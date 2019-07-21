@@ -10,4 +10,125 @@
     font-size: 1.5rem;
     margin: 0;
   }
+
+  .display-champs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    justify-items: flex-start;
+    text-align: left;
+    overflow: scroll;
+    height: 80vh;
+
+    article {
+      display: inline;
+      margin: .75rem;
+    }
+  }
+}
+
+.Modal {
+  background: $medium-bg;
+  border-radius: 3px;
+  box-shadow: 2px 3px 4px darken($dark-bg, 20%);
+  color: $btn-bg;
+  height: fit-content;
+  margin: auto;
+  padding: 1.5rem;
+  position: relative;
+  bottom: -20%;
+  width: 65%;
+
+  button {
+    background-color: $dark-bg;
+    border: 1px solid $btn-border;
+    border-radius: 25px;
+    color: $btn-bg;
+    font-size: 1.25rem;
+    grid-area: x;
+    height: 2rem;
+    width: 2rem;
+
+    &:hover {
+      background-color: $btn-bg;
+      color: $btn-border;
+      cursor: pointer;
+    }
+  }
+
+  &:focus {
+    outline: transparent;
+  }
+
+  .modal-display-champions {
+    height: 50%;
+  }
+
+  .display-modal {
+    display: grid;
+    grid-template-areas:
+    "img name name . x"
+    "img class range cost ."
+    "stats stats stats stats ."
+    "p-img p-info p-info p-info .";
+    grid-template-rows: .5fr .5fr .5fr 1.5fr;
+    height: 200%;
+    overflow: scroll;
+  
+    .modal-range {
+      grid-area: range;
+    }
+
+    .modal-name {
+      grid-area: name;
+      margin: auto;
+    }
+
+    .modal-class-origin {
+      grid-area: class;
+      margin: auto;
+    }
+  
+    .modal-cost {
+      grid-area: cost;
+      margin: auto;
+    }
+
+    .modal-stats {
+      font-size: 1.2rem;
+      grid-area: stats;
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  
+    .modal-thumbnail {
+      grid-area: img;
+      margin: auto;
+    }
+
+    .modal-p-thumbnail {
+      grid-area: p-img;
+      margin: auto;
+    }
+
+    .modal-p-name {
+      grid-area: p-name;
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    .modal-p-info {
+      grid-area: p-info;
+      margin: auto;
+    }
+
+    h5 {
+      font-weight: 400;
+    }
+  }
+
+  .modal-tooltip {
+    color: white;
+  }
 }

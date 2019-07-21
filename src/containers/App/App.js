@@ -16,9 +16,6 @@ export class App extends Component {
 
   componentDidMount() {
     this.props.fetchChampions('https://tft-backend.herokuapp.com/api/v1/champions')
-    // fetch('https://tft-backend.herokuapp.com/api/v1/champions')
-    // .then(res => res.json())
-    // .then(res => console.log(res))
   }
   
 
@@ -41,12 +38,8 @@ export class App extends Component {
   }
 }
 
-export const mapStateToProps = state => ({
-  champions: state.champions
-});
-
 export const mapDispatchToProps = dispatch => ({
   fetchChampions: url => dispatch(fetchChampions(url))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(null, mapDispatchToProps)(App);

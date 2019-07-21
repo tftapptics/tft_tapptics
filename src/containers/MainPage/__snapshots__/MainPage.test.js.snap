@@ -4,6 +4,6 @@ exports[`MainPage should match the snapshot with all the data passed in 1`] = `
 <div
   className="MainPage"
 >
-  <ChosenDisplay />
+  <Connect(ChosenDisplay) />
 </div>
 `;
