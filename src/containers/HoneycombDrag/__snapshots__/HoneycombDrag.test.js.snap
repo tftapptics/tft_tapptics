@@ -1,3 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HoneycombDrag should match the snapshot with the data passed in 1`] = `undefined`;
+exports[`HoneycombDrag should match the snapshot with the data passed in 1`] = `
+<Layout
+  className="HoneycombDrag"
+  flat={false}
+  origin={
+    Object {
+      "x": -40,
+      "y": 50,
+    }
+  }
+  size={
+    Object {
+      "x": 5,
+      "y": 5,
+    }
+  }
+  spacing={1.05}
+>
+  <Hexagon
+    data={
+      Object {
+        "image": undefined,
+        "q": -2,
+        "r": -2,
+        "s": 4,
+        "text": "Vayne",
+      }
+    }
+    fill={null}
+    key="0"
+    onDragEnd={[Function]}
+    onDragStart={[Function]}
+    q={-2}
+    r={-2}
+    s={4}
+  >
+    <Text
+      className="hex-text"
+    >
+      Vayne
+    </Text>
+  </Hexagon>
+</Layout>
+`;

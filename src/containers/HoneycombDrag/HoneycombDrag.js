@@ -16,7 +16,6 @@ class HoneycombDrag extends Component {
         });
       })
     })
-    console.log(hexagons)
 
     return (
          <Layout className="HoneycombDrag" size={{ x: 5, y: 5 }} flat={false} spacing={1.05} origin={{ x: -40, y: 50 }}>
