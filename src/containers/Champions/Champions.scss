@@ -67,10 +67,10 @@
   .display-modal {
     display: grid;
     grid-template-areas:
-    "img name cost x"
-    "img class range ."
-    "stats stats stats ."
-    "p-img p-info p-info .";
+    "img name name . x"
+    "img class range cost ."
+    "stats stats stats stats ."
+    "p-img p-info p-info p-info .";
     grid-template-rows: .5fr .5fr .5fr 1.5fr;
     height: 200%;
     overflow: scroll;
