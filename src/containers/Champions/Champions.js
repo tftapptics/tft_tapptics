@@ -4,7 +4,7 @@ import ReactModal from 'react-modal';
 import ReactTooltip from 'react-tooltip';
 
 
-class Champions extends Component {
+export class Champions extends Component {
   constructor() {
     super()
     this.state = {
