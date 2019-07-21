@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ReactModal from 'react-modal';
+import ReactTooltip from 'react-tooltip';
 
 
 class Champions extends Component {
@@ -13,7 +14,7 @@ class Champions extends Component {
           data: {
             health: [],
             ability_info: {
-              attributes: [{damage: [], totaldamage: [] }],
+              attributes: [{damage: [] }],
             },
           },
           origin_class_type: {
@@ -42,7 +43,7 @@ class Champions extends Component {
         data: {
           health: [],
           ability_info: {
-            attributes: [{damage: [], totaldamage: []}],
+            attributes: [{damage: []}],
           },
         },
         origin_class_type: {
@@ -59,8 +60,6 @@ class Champions extends Component {
       }
     });
   }
-
-  // / <h5> {this.state.currentChampion.origin_class_type.data[1].attributes.data.thumbnail}</h5> / {this.state.currentChampion.attributes.origin_class_type.data[2] &&this.state.currentChampion.attributes.origin_class_type.data[2].attributes.data.thumbnail} 
   
 
   render() {
@@ -78,7 +77,15 @@ class Champions extends Component {
         <p className="modal-range">Range: {this.state.currentChampion.attributes.data.range}</p>
         <div className="modal-class-origin">
           {this.state.currentChampion.attributes.origin_class_type.data.map(i => 
-            (<img src={i.attributes.data.thumbnail} alt={i.attributes.data.name} />)
+            (<div>
+              <a data-tip data-for={i.attributes.data.name}>
+              <img src={i.attributes.data.thumbnail} alt={i.attributes.data.name} />
+            </a>
+              <ReactTooltip id={i.attributes.data.name} type='success' >
+                <span>{i.attributes.data.name}</span>
+              </ReactTooltip>
+            </div>
+            )
           )}
           </div>
         <div className="modal-stats">
