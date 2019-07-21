@@ -113,7 +113,6 @@ describe('App', () => {
       expect(wrapper).toMatchSnapshot();
     });
   });
-
   describe('mapStateToProps', () => {
     it('should have isLoading in state', () => {
       const mockState = {
