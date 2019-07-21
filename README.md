@@ -12,8 +12,10 @@ The backend repository is available [here](https://github.com/tftapptics/tft_bac
 ## Contributors
 ### Front End Contributors
 [Duy Vu](https://github.com/Rosebud303)
+
 [Raechel Odom](https://github.com/raechelo)
 
 ### Back End Contributors
 [Deonte Cooper](https://github.com/djc00p)
+
 [Ethan Grab](https://github.com/Stoovels)
