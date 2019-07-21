@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { PropTypes } from 'prop-types'
 import ReactModal from 'react-modal';
 import ReactTooltip from 'react-tooltip';
 
@@ -122,6 +123,10 @@ export class Champions extends Component {
       </section>
     )
   }
+}
+
+Champions.propTypes = {
+  champions: PropTypes.array
 }
 
 export const mapStateToProps = state => ({

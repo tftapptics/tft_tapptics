@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { PropTypes } from 'prop-types';
 import { HexUtils, GridGenerator, Layout, Hexagon, Text, Pattern } from 'react-hexgrid';
 
 class HoneycombDrag extends Component {
@@ -40,6 +41,10 @@ class HoneycombDrag extends Component {
       </Layout>
     )
   }
+}
+
+HoneycombDrag.propTypes = {
+  champions: PropTypes.array
 }
 
 export default HoneycombDrag;

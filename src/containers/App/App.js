@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
+import { PropTypes } from 'prop-types';
 import Champions from '../Champions/Champions';
 import Items from '../Items/Items';
 import Synergies from '../Synergies/Synergies';
@@ -36,6 +37,10 @@ export class App extends Component {
     </div>
     )
   }
+}
+
+App.propTypes = {
+  champions: PropTypes.array
 }
 
 export const mapDispatchToProps = dispatch => ({
