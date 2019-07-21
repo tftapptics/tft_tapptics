@@ -14,8 +14,9 @@ export class Carousel extends Component {
     })
     const initialHeroes = filteredHeroes.map(hero => <InitialCharacter key={hero.attributes.data.name} 
                                                                        name={hero.attributes.data.name}
-                                                                       img={hero.attributes.data.champion_thumbnail}
-                                                                       synergy={hero.attributes.origin_class_type.data[0].attributes.data.name} />)
+                                                                       img={hero.attributes.data.model_img}
+                                                                       synergy={hero.attributes.origin_class_type.data[0].attributes.data.name} 
+                                                                       rarity={hero.attributes.data.cost}/>)
     return (
       <div className='full-car'>
         <h1 className='car-title'>Choose A Champion</h1>
