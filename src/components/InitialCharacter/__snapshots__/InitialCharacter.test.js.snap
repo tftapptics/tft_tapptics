@@ -3,5 +3,23 @@
 exports[`Champions should match the snapshot with all the data passed in 1`] = `
 <div
   className="images"
-/>
+>
+  <a
+    data-tip={true}
+  >
+    <img
+      className="car-imgs"
+    />
+  </a>
+  <ReactTooltip
+    clickable={false}
+    insecure={true}
+    resizeHide={true}
+    type="dark"
+    wrapper="div"
+  >
+    <li />
+    <li />
+  </ReactTooltip>
+</div>
 `;
