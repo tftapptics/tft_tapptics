@@ -1,59 +1,34 @@
 import React, { Component } from 'react';
-import InitialCharacter from '../../components/InitialCharacter/InitialCharacter'
-import ReactTooltip from 'react-tooltip'
+import InitialCharacter from '../../components/InitialCharacter/InitialCharacter';
+import { connect } from 'react-redux'
 
-
-class Carousel extends Component {
+export class Carousel extends Component {
+  constructor(props) {
+    super(props);
+    
+  }
+  
   render() {
+    const filteredHeroes = this.props.champions.filter( champion => {
+      return champion.attributes.data.cost <= 2
+    })
+    const initialHeroes = filteredHeroes.map(hero => <InitialCharacter key={hero.attributes.data.name} 
+                                                                       name={hero.attributes.data.name}
+                                                                       img={hero.attributes.data.champion_thumbnail}
+                                                                       synergy={hero.attributes.origin_class_type.data[0].attributes.data.name} />)
     return (
       <div className='full-car'>
         <h1 className='car-title'>Choose A Champion</h1>
         <div className='carousel'>
-        <div className='images'>
-          <a data-tip data-for='this-one'>
-            <img className='car-imgs' src='https://i.imgur.com/9YG3Clp.png' />
-          </a>
-          <ReactTooltip id='this-one' type='success' >
-              <span>IT WORKS SON!</span>
-          </ReactTooltip>
-          </div>
-          <div className='images'>
-          <a data-tip data-for='thistwo'>
-            <img className='car-imgs' src='https://i.imgur.com/DMOVd7b.png' />
-          </a>
-          <ReactTooltip id='thistwo' type='success' >
-              <span>DUUUUDE!</span>
-          </ReactTooltip>
-          </div>
-          <div className='images'>
-          <a data-tip data-for='this-three'>
-            <img className='car-imgs' src='https://i.imgur.com/0keMK4n.png' />
-          </a>
-          <ReactTooltip id='this-three' type='success' >
-              <span>DOG IM TELLIN YOU!</span>
-          </ReactTooltip>
-          </div>
-          <div className='images'>
-          <a data-tip data-for='this-4'>
-            <img className='car-imgs' src='https://i.imgur.com/e08Gynb.png' />
-          </a>
-          <ReactTooltip id='this-4' type='success' >
-              <span>BELIEVE ME</span>
-          </ReactTooltip>
-          </div>
-          <div className='images'>
-          <a data-tip data-for='this-5'>
-            <img className='car-imgs' src='https://i.imgur.com/OdC7Spy.png' />
-          </a>
-          <ReactTooltip id='this-5' type='success' >
-              <span>BELIEVE ME YET!??</span>
-          </ReactTooltip>
+          {initialHeroes}
         </div>
-        {/* <InitialCharacter /> */}
-      </div>
       </div>
     )
   }
 }
 
-export default Carousel;
+export const mapStateToProps = (state) => ({
+  champions: state.champions
+})
+
+export default connect(mapStateToProps)(Carousel)
