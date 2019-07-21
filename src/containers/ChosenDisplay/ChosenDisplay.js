@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { HexGrid } from 'react-hexgrid';
-import Honeycomb from '../Honeycomb/Honeycomb';
-import HoneycombDrag from '../HoneycombDrag/HoneycombDrag';
+import Honeycomb from '../../components/Honeycomb/Honeycomb';
+import HoneycombDrag from '../../components/HoneycombDrag/HoneycombDrag';
 import Stats from '../Stats/Stats';
 import { connect } from 'react-redux';
 
