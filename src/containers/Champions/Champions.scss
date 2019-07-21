@@ -28,7 +28,8 @@
 
 .Modal {
   background: $medium-bg;
-  box-shadow: 2px 2px 2px darken($dark-bg, 20%);
+  border-radius: 3px;
+  box-shadow: 2px 3px 4px darken($dark-bg, 20%);
   color: $btn-bg;
   height: 55%;
   margin: auto;
@@ -44,8 +45,18 @@
     color: $btn-bg;
     font-size: 1.25rem;
     grid-area: x;
-    height: 3rem;
-    width: 3rem;
+    height: 2rem;
+    width: 2rem;
+
+    &:hover {
+      background-color: $btn-bg;
+      color: $btn-border;
+      cursor: pointer;
+    }
+  }
+
+  &:focus {
+    outline: transparent;
   }
 
   .modal-display-champions {
@@ -69,6 +80,7 @@
 
     .modal-name {
       grid-area: name;
+      margin: auto;
     }
 
     .modal-class-origin {
@@ -114,4 +126,8 @@
       font-weight: 400;
     }
   }
+}
+
+.ReactModal__Overlay, .ReactModal__Overlay--after-open {
+  background-color: rgba(22, 43, 55, .75)
 }
