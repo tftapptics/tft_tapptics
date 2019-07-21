@@ -36,8 +36,11 @@ export class Synergies extends Component {
       <div className="syngery-info">
         <img src={this.state.currentChoice.attributes.thumbnail} />
         <h3>{this.state.currentChoice.attributes.name}</h3>
+        <p>{this.state.currentChoice.attributes.tier_info}</p>
       </div>
-       <p>{this.state.currentChoice.attributes.tier_info}</p>
+      <div>
+        {/* {this.props.champions.filter(champs => champ)} */}
+      </div>
       </article>
     )
 

@@ -12,6 +12,7 @@ import Carousel from '../Carousel/Carousel'
 import ChosenDisplay from '../ChosenDisplay/ChosenDisplay';
 import { fetchChampions } from '../../thunks/fetchChampions';
 import { fetchSynergies } from '../../thunks/fetchSynergies';
+import { stat } from 'fs';
 
 
 
@@ -32,7 +33,8 @@ export class App extends Component {
         <Route exact path="/" component={Carousel} />
         <Route exact path="/items" component={Items} />
         <Route exact path="/champions" component={Champions} />
-        <Route exact path="/synergies" render={() => <Synergies synergies={this.props.synergies} />} />
+        <Route exact path="/synergies" render={() => <Synergies champions={this.props.champions}
+         synergies={this.props.synergies} />} />
         <Route exact path='/details' component={CharacterDisplay} />
         <Route exact path='/Builder' component={ChosenDisplay} />
         <Route component={NoMatch} />
@@ -47,7 +49,8 @@ App.propTypes = {
 }
 
 export const mapStateToProps = state => ({
-  synergies: state.synergies
+  synergies: state.synergies,
+  champions: state.champions
 })
 
 export const mapDispatchToProps = dispatch => ({
