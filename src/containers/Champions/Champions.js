@@ -81,8 +81,8 @@ class Champions extends Component {
             (<img src={i.attributes.data.thumbnail} alt={i.attributes.data.name} />)
           )}
           </div>
-        <h5 className="modal-health">Health: {this.state.currentChampion.attributes.data.health[0]} / {this.state.currentChampion.attributes.data.health[1]} / {this.state.currentChampion.attributes.data.health[2]}</h5>
         <div className="modal-stats">
+          <h5 className="modal-health">Health: {this.state.currentChampion.attributes.data.health[0]} / {this.state.currentChampion.attributes.data.health[1]} / {this.state.currentChampion.attributes.data.health[2]}</h5>
           <h5 className="modal-stat">Damage: {this.state.currentChampion.attributes.data.dmg}</h5>
           <h5 className="modal-stat">Attack Speed: {this.state.currentChampion.attributes.data.atk_spd}</h5>
           <h5 className="modal-stat">Magic Resistance: {this.state.currentChampion.attributes.data.mr}</h5>
