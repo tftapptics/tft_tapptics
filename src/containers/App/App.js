@@ -25,12 +25,12 @@ export class App extends Component {
     <div className="App">
       <Header />
       <Switch>
-        <Route exact path="/" component={ChosenDisplay} />
+        <Route exact path="/" component={Carousel} />
         <Route exact path="/items" component={Items} />
         <Route exact path="/champions" component={Champions} />
         <Route exact path="/synergies" component={Synergies} />
         <Route exact path='/details' component={CharacterDisplay} />
-        <Route exact path='/carousel' component={Carousel} />
+        <Route exact path='/Builder' component={ChosenDisplay} />
         <Route component={NoMatch} />
       </Switch>
     </div>
