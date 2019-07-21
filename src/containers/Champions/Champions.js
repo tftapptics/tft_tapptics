@@ -64,7 +64,7 @@ export class Champions extends Component {
 
   render() {
     const displayChampions = this.props.champions.map(champ => (
-        <article id={champ.id} onClick={(e) => this.handleOpenModal(e)}>
+        <article key={champ.id} id={champ.id} onClick={(e) => this.handleOpenModal(e)}>
           <img id={champ.id} src={champ.attributes.data.champion_thumbnail}/>
         </article>))
 

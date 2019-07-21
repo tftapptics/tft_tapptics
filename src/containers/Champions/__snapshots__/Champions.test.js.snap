@@ -12,6 +12,7 @@ exports[`Champions should match the snapshot with all the data passed in 1`] = `
   >
     <article
       id={1}
+      key="1"
       onClick={[Function]}
     >
       <img

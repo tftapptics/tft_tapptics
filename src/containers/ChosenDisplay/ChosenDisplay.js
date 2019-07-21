@@ -5,7 +5,7 @@ import HoneycombDrag from '../../components/HoneycombDrag/HoneycombDrag';
 import Stats from '../Stats/Stats';
 import { connect } from 'react-redux';
 
-class ChosenDisplay extends Component {
+export class ChosenDisplay extends Component {
   constructor() {
     super();
     this.state = {
