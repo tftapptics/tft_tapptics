@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { PropTypes } from 'prop-types'
 import ReactModal from 'react-modal';
 import ReactTooltip from 'react-tooltip';
 
 
-class Champions extends Component {
+export class Champions extends Component {
   constructor() {
     super()
     this.state = {
@@ -64,7 +65,7 @@ class Champions extends Component {
 
   render() {
     const displayChampions = this.props.champions.map(champ => (
-        <article id={champ.id} onClick={(e) => this.handleOpenModal(e)}>
+        <article key={champ.id} id={champ.id} onClick={(e) => this.handleOpenModal(e)}>
           <img id={champ.id} src={champ.attributes.data.champion_thumbnail}/>
         </article>))
 
@@ -122,6 +123,10 @@ class Champions extends Component {
       </section>
     )
   }
+}
+
+Champions.propTypes = {
+  champions: PropTypes.array
 }
 
 export const mapStateToProps = state => ({

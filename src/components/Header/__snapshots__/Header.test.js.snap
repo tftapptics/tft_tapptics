@@ -32,14 +32,14 @@ exports[`Header should match the snapshot with all the data passed in 1`] = `
       href="/"
       id="home"
     >
-      Home
+      Home / Carousel
     </a>
     <a
       className="menu-item"
-      href="/items"
-      id="about"
+      href="/Builder"
+      id="contact"
     >
-      Items
+      Builder
     </a>
     <a
       className="menu-item"
@@ -50,17 +50,17 @@ exports[`Header should match the snapshot with all the data passed in 1`] = `
     </a>
     <a
       className="menu-item"
+      href="/items"
+      id="about"
+    >
+      Items
+    </a>
+    <a
+      className="menu-item"
       href="/Synergies"
       id="contact"
     >
       Synergies
-    </a>
-    <a
-      className="menu-item"
-      href="/Carousel"
-      id="contact"
-    >
-      Carousel
     </a>
   </Menu>
   <img

@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import { HexGrid } from 'react-hexgrid';
-import Honeycomb from '../Honeycomb/Honeycomb';
-import HoneycombDrag from '../HoneycombDrag/HoneycombDrag';
-import Stats from '../Stats/Stats';
+import { PropTypes } from 'prop-types'
 import { connect } from 'react-redux';
+import Honeycomb from '../../components/Honeycomb/Honeycomb';
+import HoneycombDrag from '../../components/HoneycombDrag/HoneycombDrag';
+import Stats from '../Stats/Stats';
 
-class ChosenDisplay extends Component {
+export class ChosenDisplay extends Component {
   constructor() {
     super();
     this.state = {
@@ -42,6 +43,10 @@ class ChosenDisplay extends Component {
       </div>
     )
   }
+}
+
+ChosenDisplay.propTypes = {
+  champions: PropTypes.array
 }
 
 export const mapStateToProps = state => ({

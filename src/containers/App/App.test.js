@@ -108,11 +108,11 @@ describe('App', () => {
                              />);
     });
 
+
     it('should match the snapshot with all the data passed in', () => {
       expect(wrapper).toMatchSnapshot();
     });
   });
-
   describe('mapStateToProps', () => {
     it('should have isLoading in state', () => {
       const mockState = {

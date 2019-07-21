@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { PropTypes } from 'prop-types';
 import { HexUtils, GridGenerator, Layout, Hexagon, Text, Pattern } from 'react-hexgrid';
 
 class HoneycombDrag extends Component {
@@ -28,19 +29,22 @@ class HoneycombDrag extends Component {
               s={hex.s}
               fill={hex.image ? HexUtils.getID(hex) : null}
               data={hex}
-              onDragStart={(e, h) => this.onDragStart(e, h)}
-              onDragEnd={(e, h, s) => this.onDragEnd(e, h, s)}
+              // onDragStart={(e, h) => this.onDragStart(e, h)}
+              // onDragEnd={(e, h, s) => this.onDragEnd(e, h, s)}
             >
               <Text className="hex-text">{hex.text}</Text>
               { hex.image && <Pattern id={HexUtils.getID(hex)} link={hex.image} /> }
               {/* { console.log(this.props.champions.find(champ => champ.attributes.data.name.includes(hex.text).attributes.data.champion_thumbnail))} */}
-              {console.log(hex)}
             </Hexagon>
           ))
         }
       </Layout>
     )
   }
+}
+
+HoneycombDrag.propTypes = {
+  champions: PropTypes.array
 }
 
 export default HoneycombDrag;

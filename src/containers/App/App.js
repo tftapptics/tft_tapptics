@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
+import { PropTypes } from 'prop-types';
 import Champions from '../Champions/Champions';
 import Items from '../Items/Items';
 import Synergies from '../Synergies/Synergies';
@@ -25,17 +26,21 @@ export class App extends Component {
     <div className="App">
       <Header />
       <Switch>
-        <Route exact path="/" component={ChosenDisplay} />
+        <Route exact path="/" component={Carousel} />
         <Route exact path="/items" component={Items} />
         <Route exact path="/champions" component={Champions} />
         <Route exact path="/synergies" component={Synergies} />
         <Route exact path='/details' component={CharacterDisplay} />
-        <Route exact path='/carousel' component={Carousel} />
+        <Route exact path='/Builder' component={ChosenDisplay} />
         <Route component={NoMatch} />
       </Switch>
     </div>
     )
   }
+}
+
+App.propTypes = {
+  champions: PropTypes.array
 }
 
 export const mapDispatchToProps = dispatch => ({

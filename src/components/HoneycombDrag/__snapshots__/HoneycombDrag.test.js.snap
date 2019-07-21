@@ -30,8 +30,6 @@ exports[`HoneycombDrag should match the snapshot with the data passed in 1`] = `
     }
     fill={null}
     key="0"
-    onDragEnd={[Function]}
-    onDragStart={[Function]}
     q={-2}
     r={-2}
     s={4}
