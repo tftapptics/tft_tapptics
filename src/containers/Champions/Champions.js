@@ -81,7 +81,7 @@ class Champions extends Component {
               <a data-tip data-for={i.attributes.data.name}>
               <img src={i.attributes.data.thumbnail} alt={i.attributes.data.name} />
             </a>
-              <ReactTooltip id={i.attributes.data.name} type='success' >
+              <ReactTooltip id={i.attributes.data.name} type='dark' effect="float" className="modal-tooltip">
                 <span>{i.attributes.data.name}</span>
               </ReactTooltip>
             </div>
