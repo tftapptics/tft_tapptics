@@ -48,6 +48,7 @@
   grid-template-areas: ". . x"
   ". info ."
   "champ champ champ";
+  grid-template-columns: .5fr 2fr .5fr;
   text-align: center;
 
   img {
@@ -61,5 +62,12 @@
 
   .syngery-info {
     grid-area: info;
+  }
+
+  .champ-syngery-matches {
+    grid-area: champ;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
   }
 }

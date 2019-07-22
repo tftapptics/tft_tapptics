@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactModal from 'react-modal';
+import ReactTooltip from 'react-tooltip';
 
 
 export class Synergies extends Component {
@@ -7,7 +8,7 @@ export class Synergies extends Component {
     super();
     this.state = {
       showModal: false,
-      currentChoice: { attributes: { } }
+      currentChoice: { attributes: { thumbnail: '', name: '', tier_info: []} }
     }
   }
 
@@ -18,7 +19,7 @@ export class Synergies extends Component {
   }
 
   handleCloseModal = () => {
-    this.setState({showModal: false, currentChoice: { attributes: { } } })
+    this.setState({showModal: false, currentChoice: { attributes: { thumbnail: '', name: '', tier_info: [] } } })
   }
   
   render() {
@@ -30,16 +31,41 @@ export class Synergies extends Component {
      </article>
     ))
 
+    const matchingChamps = this.props.champions.reduce((acc, champion) => {
+      champion.attributes.origin_class_types.map(type => {
+        if (!acc.includes(type.name) && type.name == this.state.currentChoice.attributes.name) {
+          acc.push(champion)
+        }
+      });
+      return acc
+      }, []);
+
     const displayModal = (
       <article className="display-synergy-modal">
       <button onClick={this.handleCloseModal}>X</button>
       <div className="syngery-info">
         <img src={this.state.currentChoice.attributes.thumbnail} />
         <h3>{this.state.currentChoice.attributes.name}</h3>
-        <p>{this.state.currentChoice.attributes.tier_info}</p>
+        {this.state.currentChoice.attributes.tier_info.map(tier => (<p>{tier}</p>))}
       </div>
-      <div>
-        {/* {this.props.champions.filter(champs => champ)} */}
+      <div className="champ-syngery-matches">
+        {
+          matchingChamps.map(champ => (
+          <div>
+            <a data-tip data-for={champ.attributes.name}>
+              <img src={champ.attributes.champion_thumbnail} alt={champ.attributes.name} />
+            </a>
+            <ReactTooltip id={champ.attributes.name} type='dark' effect="float" className="modal-tooltip">
+                <div>{champ.attributes.name}</div>
+                {
+                  champ.attributes.origin_class_types.map(type => (
+                    <div>{type.name}</div>
+                  ))
+                }
+              </ReactTooltip>
+          </div>
+          ))
+        }
       </div>
       </article>
     )
