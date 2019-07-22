@@ -36,14 +36,12 @@ describe('fetchChampions', () => {
     expect(mockDispatch).toHaveBeenCalledWith(isLoading(true));
   });
 
-  it.skip('should dispatch setChampions if the response is okay', async () => {
+  it.skip('should dispatch setChampions with the correct params', async () => {
+    const champions = [{name: 'Gnar'}];
+    const thunk = fetchChampions(mockUrl)
+    mockDispatch = jest.fn().mockImplementation(() => champions);
     await thunk(mockDispatch);
-    const mockState = {champions: [{name: 'Yasuo'}] }
-
-    const actionToDispatch = setChampions(mockState);
-    const mappedProps = mapDispatchToProps(mockDispatch);
-    mappedProps.setChampions(mockState);
-    expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
+    expect(mockDispatch).toHaveBeenCalledWith(setChampions(champions));
   })
 
   it('should dispatch isLoading(false)', async () => {
