@@ -5,21 +5,45 @@ exports[`Champions should match the snapshot with all the data passed in 1`] = `
   className="images"
 >
   <a
+    data-for="Bob"
     data-tip={true}
   >
     <img
       className="car-imgs"
+      src="img.png"
     />
   </a>
   <ReactTooltip
     clickable={false}
+    id="Bob"
     insecure={true}
     resizeHide={true}
     type="dark"
     wrapper="div"
   >
-    <li />
-    <li />
+    <p>
+      Name: 
+      Bob
+    </p>
+    <p
+      className="tool-tip"
+    >
+      Synergy: 
+      <p
+        className="tool-tip"
+      >
+         
+      </p>
+      <p
+        className="tool-tip"
+      >
+         
+      </p>
+    </p>
+    <p>
+      Rarity/Cost: 
+      2
+    </p>
   </ReactTooltip>
 </div>
 `;

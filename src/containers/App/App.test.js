@@ -119,19 +119,6 @@ describe('App', () => {
       expect(wrapper).toMatchSnapshot();
     });
   });
-  describe('mapStateToProps', () => {
-    it('should have isLoading in state', () => {
-      const mockState = {
-        champions: mockChamps,
-        isLoading: false
-      }
-      const expected = {
-        champions: mockChamps
-      }
-      const result = mapStateToProps(mockState);
-      expect(result).toEqual(expected)
-    });
-  });
 
   describe('mapDispatchToProps', () => {
     it('should call fetchChampions with the correct params', () => {
