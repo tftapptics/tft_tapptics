@@ -6,14 +6,19 @@ export const isLoading = bool => ({
 export const setError = message => ({
   type: 'SET_ERROR',
   message
-})
+});
 
 export const setChampions = champs => ({
   type: 'SET_CHAMPIONS',
   champs
-})
+});
 
 export const setRoster = champ => ({
   type: 'SET_ROSTER',
   champ
-})
+});
+
+export const setSynergies = synergies => ({
+  type: 'SET_SYNERGIES',
+  synergies
+});
