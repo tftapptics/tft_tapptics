@@ -8,21 +8,11 @@ describe('Champions', () => {
   let mockChampions = [{
     id: 1,
     attributes: {
-    data: {
-      health: [],
-      ability_info: {
-        attributes: [{damage: [] }],
-      }
+    health: [],
+    ability_info: {
+      attributes: [{damage: [] }],
     },
-    origin_class_type: {
-    data: [{
-      attributes: {
-        data: {
-    tier_info: [], tiers: [],
-        }
-      }
-    }]
-  }
+    origin_class_types: []
 }}]
 
   beforeEach(() => {

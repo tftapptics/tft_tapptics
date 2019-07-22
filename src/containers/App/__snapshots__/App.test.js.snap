@@ -22,9 +22,9 @@ exports[`App Container should match the snapshot with all the data passed in 1`]
       path="/champions"
     />
     <Route
-      component={[Function]}
       exact={true}
       path="/synergies"
+      render={[Function]}
     />
     <Route
       component={[Function]}
