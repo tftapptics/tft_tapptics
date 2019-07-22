@@ -101,29 +101,15 @@ describe('App', () => {
   describe('Container', () => {
     let mockFunc;
     let wrapper;
+
     beforeEach(() => {
       mockFunc = jest.fn()
-      wrapper = shallow(<App champions={mockChamps}
-                             fetchChampions={mockFunc}
-                             />);
+      wrapper = shallow(<App fetchChampions={mockFunc} />);
     });
 
 
     it('should match the snapshot with all the data passed in', () => {
       expect(wrapper).toMatchSnapshot();
-    });
-  });
-  describe('mapStateToProps', () => {
-    it('should have isLoading in state', () => {
-      const mockState = {
-        champions: mockChamps,
-        isLoading: false
-      }
-      const expected = {
-        champions: mockChamps
-      }
-      const result = mapStateToProps(mockState);
-      expect(result).toEqual(expected)
     });
   });
 
