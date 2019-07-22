@@ -1,9 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { App, mapStateToProps, mapDispatchToProps } from './App';
+import { fetchChampions } from '../../thunks/fetchChampions';
+import { fetchSynergies } from '../../thunks/fetchSynergies';
 
-import { fetchChampions } from '../../thunks/fetchChampions'
-jest.mock('../../thunks/fetchChampions')
+jest.mock('../../thunks/fetchChampions');
+jest.mock('../../thunks/fetchSynergies');
 
 
   let mockChamps = [{
@@ -100,11 +102,16 @@ describe('App', () => {
   
   describe('Container', () => {
     let mockFunc;
+    let mockFetchSynergies;
     let wrapper;
 
     beforeEach(() => {
       mockFunc = jest.fn()
-      wrapper = shallow(<App fetchChampions={mockFunc} />);
+      mockFetchSynergies = jest.fn();
+      wrapper = shallow(<App champions={mockChamps}
+                             fetchChampions={mockFunc}
+                             fetchSynergies={mockFetchSynergies}
+                             />);
     });
 
 

@@ -12,21 +12,11 @@ export class Champions extends Component {
       showModal: false,
       currentChampion: {
         attributes: {
-          data: {
-            health: [],
-            ability_info: {
-              attributes: [{damage: [] }],
-            },
+          health: [],
+          ability_info: {
+            attributes: [{damage: [] }],
           },
-          origin_class_type: {
-          data: [{
-            attributes: {
-              data: {
-          tier_info: [], tiers: [],
-              }
-            }
-          }]
-        }
+          origin_class_types: []
       }
     }
   }
@@ -41,22 +31,11 @@ export class Champions extends Component {
   handleCloseModal = () => {
     this.setState({showModal: false, currentChampion: {
       attributes: {
-        data: {
-          health: [],
-          ability_info: {
-            attributes: [{damage: []}],
-          },
+        health: [],
+        ability_info: {
+          attributes: [{damage: []}],
         },
-        origin_class_type: {
-          data: [{
-            attributes: {
-              data: {
-                tier_info: [],
-                tiers: [],
-                }
-              }
-            }]
-          }
+        origin_class_types: []
         }
       }
     });
@@ -66,42 +45,42 @@ export class Champions extends Component {
   render() {
     const displayChampions = this.props.champions.map(champ => (
         <article key={champ.id} id={champ.id} onClick={(e) => this.handleOpenModal(e)}>
-          <img id={champ.id} src={champ.attributes.data.champion_thumbnail}/>
+          <img id={champ.id} src={champ.attributes.champion_thumbnail}/>
         </article>))
 
     let displayModal = (
       <article className="display-modal">
         <button className="x-btn" onClick={this.handleCloseModal}>X</button>
-        <img src={this.state.currentChampion.attributes.data.champion_thumbnail} alt={this.state.currentChampion.attributes.data.name} className="modal-thumbnail" />
-        <h3 className="modal-name">{this.state.currentChampion.attributes.data.name}</h3>
-        <h5 className="modal-cost"><i class="fas fa-coins"></i>  {this.state.currentChampion.attributes.data.cost}</h5>
-        <p className="modal-range">Range: {this.state.currentChampion.attributes.data.range}</p>
+        <img src={this.state.currentChampion.attributes.champion_thumbnail} alt={this.state.currentChampion.attributes.name} className="modal-thumbnail" />
+        <h3 className="modal-name">{this.state.currentChampion.attributes.name}</h3>
+        <h5 className="modal-cost"><i class="fas fa-coins"></i>  {this.state.currentChampion.attributes.cost}</h5>
+        <p className="modal-range">Range: {this.state.currentChampion.attributes.range}</p>
         <div className="modal-class-origin">
-          {this.state.currentChampion.attributes.origin_class_type.data.map(i => 
+          {this.state.currentChampion.attributes.origin_class_types.map(i => 
             (<div>
-              <a data-tip data-for={i.attributes.data.name}>
-              <img src={i.attributes.data.thumbnail} alt={i.attributes.data.name} />
+              <a data-tip data-for={i.name}>
+              <img src={i.thumbnail} alt={i.name} />
             </a>
-              <ReactTooltip id={i.attributes.data.name} type='dark' effect="float" className="modal-tooltip">
-                <span>{i.attributes.data.name}</span>
+              <ReactTooltip id={i.name} type='dark' effect="float" className="modal-tooltip">
+                <span>{i.name}</span>
               </ReactTooltip>
             </div>
             )
           )}
           </div>
         <div className="modal-stats">
-          <h5 className="modal-health">Health: {this.state.currentChampion.attributes.data.health[0]} / {this.state.currentChampion.attributes.data.health[1]} / {this.state.currentChampion.attributes.data.health[2]}</h5>
-          <h5 className="modal-stat">Damage: {this.state.currentChampion.attributes.data.dmg}</h5>
-          <h5 className="modal-stat">Attack Speed: {this.state.currentChampion.attributes.data.atk_spd}</h5>
-          <h5 className="modal-stat">Magic Resistance: {this.state.currentChampion.attributes.data.mr}</h5>
-          <h5 className="modal-stat">Armor: {this.state.currentChampion.attributes.data.armor}</h5>
+          <h5 className="modal-health">Health: {this.state.currentChampion.attributes.health[0]} / {this.state.currentChampion.attributes.health[1]} / {this.state.currentChampion.attributes.health[2]}</h5>
+          <h5 className="modal-stat">Damage: {this.state.currentChampion.attributes.dmg}</h5>
+          <h5 className="modal-stat">Attack Speed: {this.state.currentChampion.attributes.atk_spd}</h5>
+          <h5 className="modal-stat">Magic Resistance: {this.state.currentChampion.attributes.mr}</h5>
+          <h5 className="modal-stat">Armor: {this.state.currentChampion.attributes.armor}</h5>
         </div>
-        <img src={this.state.currentChampion.attributes.data.ability_thumbnail}
-          alt={this.state.currentChampion.attributes.data.ability_name}
+        <img src={this.state.currentChampion.attributes.ability_thumbnail}
+          alt={this.state.currentChampion.attributes.ability_name}
           className="modal-p-thumbnail" />
         <section className="modal-p-info">
-          <h4 className="modal-p-name">{this.state.currentChampion.attributes.data.ability_name}</h4>
-          <p className="modal-p-info">{this.state.currentChampion.attributes.data.ability_info}</p>
+          <h4 className="modal-p-name">{this.state.currentChampion.attributes.ability_name}</h4>
+          <p className="modal-p-info">{this.state.currentChampion.attributes.ability_info}</p>
         </section>
       </article>)
 
