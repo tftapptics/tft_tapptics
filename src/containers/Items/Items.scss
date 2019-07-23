@@ -10,4 +10,43 @@
     font-size: 1.5rem;
     margin: 0;
   }
+
+  .display-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  article {
+    background-color: $modal-overlay;
+    border: 1px solid $dark-bg;
+    color: $btn-bg;
+    display: grid;
+    grid-template-areas: "img"
+    "name"
+    "info";
+    grid-template-rows: 1fr .5fr .25fr;
+    margin: auto;
+    text-align: center;
+    height: 12rem;
+    width: 11%;
+
+    h4, p, img {
+      margin: .5rem;
+    }
+
+    img {
+      grid-area: img;
+      margin: auto;
+    }
+
+    h4 {
+      grid-area: name;
+    }
+
+    p {
+      font-size: .8rem;
+      grid-area: info;
+    }
+  }
 }

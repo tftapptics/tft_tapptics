@@ -1,28 +1,27 @@
-import { fetchChampions } from '../fetchChampions';
-import { isLoading, setError, setChampions } from '../../actions';
-import { mapDispatchToProps } from '../../containers/App/App';
+import { fetchItems } from '../fetchItems';
+import { isLoading, setError, setItems } from '../../actions';
 
-describe('fetchChampions', () => {
+describe('fetchItems', () => {
 
   let mockUrl;
-  let mockChampions;
+  let mockItems;
   let mockDispatch;
   let thunk;
 
   beforeEach(() => {
-    mockUrl = 'www.lol.com';
+    mockUrl = 'www.childishgambino.com';
     mockDispatch = jest.fn();
-    mockChampions = { name: 'Miss Fortune' }
+    mockItems = [{name: 'Donny G.'}];
 
     window.fetch = jest.fn().mockImplementation(() => {
       return Promise.resolve({
-        ok: true,
+        ok: true, 
         json: () => Promise.resolve({
-          data: mockChampions
+          data: mockItems
         })
-      });
+      })
     });
-    thunk = fetchChampions(mockUrl);
+    thunk = fetchItems(mockUrl);
   });
 
   it('should call fetchData with the correct params', () => {
@@ -32,21 +31,16 @@ describe('fetchChampions', () => {
 
   it('should dispatch isLoading(true)', async () => {
     await thunk(mockDispatch);
-
     expect(mockDispatch).toHaveBeenCalledWith(isLoading(true));
   });
 
-  it.skip('should dispatch setChampions with the correct params', async () => {
-    const champions = [{name: 'Gnar'}];
-    const thunk = fetchChampions(mockUrl)
-    mockDispatch = jest.fn().mockImplementation(() => champions);
-    await thunk(mockDispatch);
-    expect(mockDispatch).toHaveBeenCalledWith(setChampions(champions));
+  it.skip('should dispatch setItems with the correct params', async () => {
+    let data = await thunk(mockDispatch);
+    expect(mockDispatch).toHaveBeenCalledWith(setItems(data));
   })
 
   it('should dispatch isLoading(false)', async () => {
     await thunk(mockDispatch);
-
     expect(mockDispatch).toHaveBeenCalledWith(isLoading(false));
   });
 
@@ -54,11 +48,10 @@ describe('fetchChampions', () => {
     window.fetch = jest.fn().mockImplementation(() => {
       return Promise.resolve({
         ok: false,
-        statusText: 'Something went wrong'
-      })
-    })
+        statusText: 'Error!'
+      });
+    });
     await thunk(mockDispatch);
-    expect(mockDispatch).toHaveBeenCalledWith(setError('Something went wrong'))
+    expect(mockDispatch).toHaveBeenCalledWith(setError('Error!'));
   });
-
 })

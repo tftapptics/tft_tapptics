@@ -85,6 +85,7 @@
     }
 
     .modal-class-origin {
+      display: flex;
       grid-area: class;
       margin: auto;
     }
@@ -130,5 +131,13 @@
 
   .modal-tooltip {
     color: white;
+  }
+}
+
+.champ-icon {
+  transition: .5s;
+  &:hover {
+    cursor: pointer;
+    opacity: .5;
   }
 }

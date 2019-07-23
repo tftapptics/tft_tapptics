@@ -43,7 +43,7 @@ export class ChosenDisplay extends Component {
           <section className="Honeycomb-section">
               {displayRoster}
           </section>
-          <section>
+          <section className='honey-2'>
               {displayChamps}
           </section>
           <article className="team-stats">
