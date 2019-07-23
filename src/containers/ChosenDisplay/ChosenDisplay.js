@@ -30,11 +30,7 @@ export class ChosenDisplay extends Component {
     });
 
     const displayRoster = this.props.roster.map( (rost, idx) => {
-      if(rost === {}){
-        return <Honeycomb key={idx} idx={idx} rost={rost}/>
-      } else {
-        return <Honeycomb key={idx} idx={idx} rost={rost}/>
-      }
+        return <Honeycomb key={idx} idx={idx} img={rost.attributes.model_img}/>
     })
 
     return (

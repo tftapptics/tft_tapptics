@@ -8,10 +8,10 @@ export class Honeycomb extends Component {
 
   render() {
     {
-      if(!this.props.rost === {}) {
+      if(this.props.img !== '') {
         return (
           <div className='tiles-main' onDragOver={() => this.props.setRosterIndex(this.props.idx)}>
-            {this.props.rost.attributes.model_img}
+            <img className='tile-img' src={this.props.img}/>
           </div>
         )
       } else {
