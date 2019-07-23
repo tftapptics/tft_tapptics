@@ -34,4 +34,10 @@ describe('actions', () => {
     const result = actions.setSynergies([{name:'Yordle'}]);
     expect(result).toEqual(expected);
   });
+
+  it('should return all items', () => {
+    const expected = {type: 'SET_ITEMS', items: [{name: 'BF Sword'}]};
+    const result = actions.setItems([{name: 'BF Sword'}]);
+    expect(result).toEqual(expected);
+  });
 });
