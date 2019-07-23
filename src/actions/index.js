@@ -6,16 +6,17 @@ export const isLoading = bool => ({
 export const setError = message => ({
   type: 'SET_ERROR',
   message
-})
+});
 
 export const setChampions = champs => ({
   type: 'SET_CHAMPIONS',
   champs
-})
+});
 
 export const setRoster = champ => ({
   type: 'SET_ROSTER',
   champ
+
 })
 
 export const setCurrentDragIndex = index => ({
@@ -32,4 +33,10 @@ export const upDateRosterInfo = (index, charInfo) => ({
   type: 'UPDATE_ROSTER',
   index,
   charInfo
-})
+});
+
+export const setSynergies = synergies => ({
+  type: 'SET_SYNERGIES',
+  synergies
+});
+

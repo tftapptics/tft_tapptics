@@ -5,6 +5,7 @@ import { champions } from './championsReducer';
 import { setRoster } from './rosterReducer';
 import { dragIndex } from './dragIndexReducer';
 import { rosterIndex } from './rosterIndexReducer'
+import { synergies } from './synergiesReducer';
 
 export const rootReducer = combineReducers({
   isLoading,
@@ -12,5 +13,6 @@ export const rootReducer = combineReducers({
   champions,
   setRoster,
   dragIndex,
-  rosterIndex
+  rosterIndex,
+  synergies
 })
