@@ -22,3 +22,8 @@ export const setSynergies = synergies => ({
   type: 'SET_SYNERGIES',
   synergies
 });
+
+export const setItems = items => ({
+  type: 'SET_ITEMS',
+  items
+});

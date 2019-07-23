@@ -3,9 +3,11 @@ import { shallow } from 'enzyme';
 import { App, mapStateToProps, mapDispatchToProps } from './App';
 import { fetchChampions } from '../../thunks/fetchChampions';
 import { fetchSynergies } from '../../thunks/fetchSynergies';
+import { fetchItems } from '../../thunks/fetchSynergies';
 
 jest.mock('../../thunks/fetchChampions');
 jest.mock('../../thunks/fetchSynergies');
+jest.mock('../../thunks/fetchItems');
 
 
   let mockChamps = [{
@@ -103,14 +105,17 @@ describe('App', () => {
   describe('Container', () => {
     let mockFunc;
     let mockFetchSynergies;
+    let mockFetchItems;
     let wrapper;
 
     beforeEach(() => {
       mockFunc = jest.fn()
       mockFetchSynergies = jest.fn();
+      mockFetchItems = jest.fn();
       wrapper = shallow(<App champions={mockChamps}
                              fetchChampions={mockFunc}
                              fetchSynergies={mockFetchSynergies}
+                             fetchItems={mockFetchItems}
                              />);
     });
 
@@ -121,6 +126,9 @@ describe('App', () => {
   });
 
   describe('mapDispatchToProps', () => {
+    let fetchItems = jest.fn();
+    let mockDispatch = jest.fn();
+    
     it('should call fetchChampions with the correct params', () => {
       let mockUrl = 'www.TFT.com';
       let mockDispatch = jest.fn();
@@ -129,5 +137,28 @@ describe('App', () => {
       mappedProps.fetchChampions(actionsToDispatch);
       expect(mockDispatch).toHaveBeenCalledWith(actionsToDispatch);
     });
+
+    it('should call fetchItems with the correct params', () => {
+        const mockState = {
+            items: [{name: 'Golden Spatula'}]
+          }
+
+          const actionToDispatch = fetchItems(mockState);
+          const mappedProps = mapDispatchToProps(mockDispatch);
+          mappedProps.fetchItems(mockState);
+          
+          expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
+      });
+
+      it('should call fetchSynergies with the correct params', () => {
+        const mockState = {
+            items: [{name: 'Golden Spatula'}]
+          }
+        const actionToDispatch = fetchSynergies(mockState);
+        const mappedProps = mapDispatchToProps(mockDispatch);
+        mappedProps.fetchSynergies(mockState);
+        
+        expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
+      });
   }); 
 });
