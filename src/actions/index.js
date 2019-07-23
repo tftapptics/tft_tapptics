@@ -40,3 +40,8 @@ export const setSynergies = synergies => ({
   synergies
 });
 
+export const setItems = items => ({
+  type: 'SET_ITEMS',
+  items
+});
+
