@@ -5,7 +5,7 @@ export const fetchItems = url => {
   return async dispatch => {
     try {
       dispatch(isLoading(true));
-      const data = fetchData(url);
+      const data = await fetchData(url);
       dispatch(setItems(data.data));
       dispatch(isLoading(false))
     } catch (error) {

@@ -44,7 +44,7 @@ export class Synergies extends Component {
       <article className="display-synergy-modal">
       <button onClick={this.handleCloseModal}>X</button>
       <div className="syngery-info">
-        <img src={this.state.currentChoice.attributes.thumbnail} />
+        <img src={this.state.currentChoice.attributes.thumbnail} alt={this.state.currentChoice.attributes.name} />
         <h3>{this.state.currentChoice.attributes.name}</h3>
         {this.state.currentChoice.attributes.tier_info.map(tier => (<p>{tier}</p>))}
       </div>

@@ -4,11 +4,13 @@ import { setError } from './errorReducer';
 import { champions } from './championsReducer';
 import { setRoster } from './rosterReducer';
 import { synergies } from './synergiesReducer';
+import { items } from './itemsReducer';
 
 export const rootReducer = combineReducers({
   isLoading,
   setError,
   champions,
   setRoster,
-  synergies
+  synergies,
+  items
 })

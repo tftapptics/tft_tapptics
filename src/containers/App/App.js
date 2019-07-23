@@ -12,7 +12,7 @@ import Carousel from '../Carousel/Carousel'
 import ChosenDisplay from '../ChosenDisplay/ChosenDisplay';
 import { fetchChampions } from '../../thunks/fetchChampions';
 import { fetchSynergies } from '../../thunks/fetchSynergies';
-import { stat } from 'fs';
+import { fetchItems } from '../../thunks/fetchItems';
 
 
 
@@ -21,6 +21,7 @@ export class App extends Component {
   componentDidMount() {
     this.props.fetchChampions('https://tft-backend.herokuapp.com/api/v1/champions');
     this.props.fetchSynergies('https://tft-backend.herokuapp.com/api/v1/origin_class_type');
+    this.props.fetchItems('https://tft-backend.herokuapp.com/api/v1/raw_items');
   }
   
 
@@ -34,7 +35,7 @@ export class App extends Component {
         <Route exact path="/items" component={Items} />
         <Route exact path="/champions" component={Champions} />
         <Route exact path="/synergies" render={() => <Synergies champions={this.props.champions}
-         synergies={this.props.synergies} />} />
+        synergies={this.props.synergies} />} />
         <Route exact path='/details' component={CharacterDisplay} />
         <Route exact path='/Builder' component={ChosenDisplay} />
         <Route component={NoMatch} />
@@ -55,7 +56,8 @@ export const mapStateToProps = state => ({
 
 export const mapDispatchToProps = dispatch => ({
   fetchChampions: url => dispatch(fetchChampions(url)),
-  fetchSynergies: url => dispatch(fetchSynergies(url))
+  fetchSynergies: url => dispatch(fetchSynergies(url)),
+  fetchItems: url => dispatch(fetchItems(url))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
