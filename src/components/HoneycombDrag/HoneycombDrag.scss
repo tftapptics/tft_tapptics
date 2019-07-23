@@ -1,18 +1,14 @@
-.HoneycombDrag {
-  
-  svg polygon {
-    fill: $overlay;
-    stroke: $cell-border;
-    stroke-width: .5;
-  }
+.tiles {
+  margin: 2px;
+  display: inline-block;
+  height: 45px;
+  width: 40px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  position: relative;
+}
 
-  .hex-text {
-    fill: white;
-    font-size: .10em;
-    fill-opacity: .7;
-
-    &:hover {
-      fill-opacity: 1;
-    }
-  }
+.icon {
+  position: absolute;
+  height: 45px;
+  width: 40px;
 }

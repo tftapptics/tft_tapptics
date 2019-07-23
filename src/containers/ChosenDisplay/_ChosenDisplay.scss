@@ -46,8 +46,10 @@
 
   .current-roster {
     display: grid;
-    grid-template-areas: 'honey stats synergy';
+    grid-template-areas: 'honey1 stats synergy'
+                          'honey2 stats synergy';
     grid-template-columns: 60% 20% 20%;
+    grid-template-rows: 80% 20%;
     height: 60vh;
 
     article {
@@ -56,7 +58,7 @@
   }
 
   .Honeycomb-section {
-    grid-area: honey;
+    grid-area: honey1;
   }
 
   .team-stats {
@@ -82,4 +84,9 @@
       margin: 0 auto;
     }
   }
+}
+
+.honey-2 {
+  margin: 2.5rem 0;
+  grid-area: honey2;
 }

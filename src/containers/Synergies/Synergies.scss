@@ -27,15 +27,18 @@
 .synergy-article {
   background-color: $modal-overlay;
   border: 1px solid $medium-bg;
-  color: $btn-border;
+  color: #83806d;
   font-size: .9rem;
   margin: 1rem;
   padding: .5rem;
   text-align: center;
   width: 10rem;
-
+  // box-shadow: 7px 7px 14px #b5a13f;
+  transition: .5s;
   &:hover {
     cursor: pointer;
+    background-color: rgba(41, 59, 103, 0.85);
+    box-shadow: 10px 10px 4px #b5a13f;
   }
 
   img {

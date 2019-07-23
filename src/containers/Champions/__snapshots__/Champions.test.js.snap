@@ -11,6 +11,7 @@ exports[`Champions should match the snapshot with all the data passed in 1`] = `
     className="display-champs"
   >
     <article
+      className="champ-icon"
       id={1}
       key="1"
       onClick={[Function]}

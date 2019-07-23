@@ -12,7 +12,7 @@ const InitialCharacter = (prop) => {
       <ReactTooltip id={name} type='dark' >
           <p>Name: {name}</p>
           <p className='tool-tip'>Synergy: {displaySynergies}</p>
-          <p >Rarity/Cost: {rarity}</p>
+          <p>Rarity/Cost: {rarity}</p>
       </ReactTooltip>
     </div>
   )

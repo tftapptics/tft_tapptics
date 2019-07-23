@@ -133,3 +133,11 @@
     color: white;
   }
 }
+
+.champ-icon {
+  transition: .5s;
+  &:hover {
+    cursor: pointer;
+    opacity: .5;
+  }
+}
