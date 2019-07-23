@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { HexGrid } from 'react-hexgrid';
 import { PropTypes } from 'prop-types'
 import { connect } from 'react-redux';
 import Honeycomb from '../../components/Honeycomb/Honeycomb';
@@ -22,14 +21,30 @@ export class ChosenDisplay extends Component {
   }
   
   render() {
+    const displayChamps = this.props.champions.map( (champion, idx) => {
+      return <HoneycombDrag key={champion.attributes.name}
+                            id={champion.id}
+                            idx={idx}
+                            name={champion.attributes.name}
+                            image={champion.attributes.champion_thumbnail} />
+    });
+
+    const displayRoster = this.props.roster.map( (rost, idx) => {
+      if(rost === {}){
+        return <Honeycomb key={idx} idx={idx} rost={rost}/>
+      } else {
+        return <Honeycomb key={idx} idx={idx} rost={rost}/>
+      }
+    })
+
     return (
       <div className='chosen-display'>
         <section className="current-roster">
           <section className="Honeycomb-section">
-            <HexGrid class="grid" width={1000} height={600} viewBox="-50 -50 100 100">
-              <Honeycomb />
-              <HoneycombDrag champions={this.props.champions}  />
-            </HexGrid>
+              {displayRoster}
+          </section>
+          <section>
+              {displayChamps}
           </section>
           <article className="team-stats">
             <Stats currentTeam={this.state.currentTeam} />
@@ -50,7 +65,8 @@ ChosenDisplay.propTypes = {
 }
 
 export const mapStateToProps = state => ({
-  champions: state.champions
+  champions: state.champions,
+  roster: state.setRoster
 });
 
 export default connect(mapStateToProps)(ChosenDisplay);

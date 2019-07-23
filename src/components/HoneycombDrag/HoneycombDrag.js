@@ -1,50 +1,41 @@
 import React, { Component } from 'react';
-import { PropTypes } from 'prop-types';
-import { HexUtils, GridGenerator, Layout, Hexagon, Text, Pattern } from 'react-hexgrid';
+import { connect } from 'react-redux';
+import { setCurrentDragIndex, upDateRosterInfo } from '../../actions'
 
 class HoneycombDrag extends Component {
+  constructor(props) {
+    super(props)
+  }
 
+  onDragEnd = () => {
+    const charinfo = this.props.champions[this.props.dragIndex];
+    this.props.updateRoster(this.props.rosterIndex, charinfo)
+  }
 
   render() {
-    // const { hexagons
-    let champs = this.props.champions
-    let hexagons = GridGenerator.parallelogram(-2, 3, -2, 1).map(hexagon => {
-      return champs.map(champ => {
-        let name = champ.attributes.data.name.split(',')
-        return Object.assign({}, hexagon, {
-          text: name[0],
-          image: champ.attributes.data.champion_thumbnail
-        });
-      })
-    })
-
+    const {name, image, idx} = this.props
+    const firstName = name.split(',')[0]
     return (
-         <Layout className="HoneycombDrag" size={{ x: 5, y: 5 }} flat={false} spacing={1.05} origin={{ x: -40, y: 50 }}>
-        {
-          hexagons[0].map((hex, i) => (
-            <Hexagon
-              key={i}
-              q={hex.q+i}
-              r={hex.r}
-              s={hex.s}
-              fill={hex.image ? HexUtils.getID(hex) : null}
-              data={hex}
-              // onDragStart={(e, h) => this.onDragStart(e, h)}
-              // onDragEnd={(e, h, s) => this.onDragEnd(e, h, s)}
-            >
-              <Text className="hex-text">{hex.text}</Text>
-              { hex.image && <Pattern id={HexUtils.getID(hex)} link={hex.image} /> }
-              {/* { console.log(this.props.champions.find(champ => champ.attributes.data.name.includes(hex.text).attributes.data.champion_thumbnail))} */}
-            </Hexagon>
-          ))
-        }
-      </Layout>
+      <div className='tiles' 
+           draggable='true'
+           onDragStart={() => this.props.setDragIndex(idx)}
+           onDragEnd={this.onDragEnd}>
+        {/* <p className='drag-name icon'>{firstName}</p> */}
+        <img className='drag-icon icon' src={image} />
+      </div>
     )
   }
 }
 
-HoneycombDrag.propTypes = {
-  champions: PropTypes.array
-}
+const mapStateToProps = (state) => ({
+  champions: state.champions,
+  rosterIndex: state.rosterIndex,
+  dragIndex: state.dragIndex
+})
 
-export default HoneycombDrag;
+const mapDispatchToProps = (dispatch) => ({
+  setDragIndex: (index) => dispatch(setCurrentDragIndex(index)),
+  updateRoster: (index, charIdx) => dispatch(upDateRosterInfo(index, charIdx))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(HoneycombDrag);
