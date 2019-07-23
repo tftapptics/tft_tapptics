@@ -5,9 +5,10 @@ import Items from './Items';
 describe('Items', () => {
 
   let wrapper;
+  let mockItems = [{ attributes: { name: 'BF Sword'} }]
 
   beforeEach(() => {
-    wrapper = shallow(<Items/>);
+    wrapper = shallow(<Items items={mockItems} />);
   });
 
   it('should match the snapshot with all the data passed in', () => {

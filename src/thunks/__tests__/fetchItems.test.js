@@ -44,7 +44,7 @@ describe('fetchItems', () => {
     expect(mockDispatch).toHaveBeenCalledWith(isLoading(false));
   });
 
-  it.skip('should dispatch an error if the response is not okay', async () => {
+  it('should dispatch an error if the response is not okay', async () => {
     window.fetch = jest.fn().mockImplementation(() => {
       return Promise.resolve({
         ok: false,
