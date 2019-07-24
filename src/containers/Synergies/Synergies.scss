@@ -24,6 +24,10 @@
   }
 }
 
+#Synergy-Modal {
+  width: 50% ;
+}
+
 .synergy-article {
   background-color: $modal-overlay;
   border: 1px solid $medium-bg;
@@ -37,7 +41,11 @@
   &:hover {
     cursor: pointer;
     background-color: rgba(41, 59, 103, 0.85);
-    box-shadow: 10px 10px 4px #b5a13f;
+    box-shadow: 3px 3px 4px $btn-bg;
+
+    h3 {
+      text-decoration: underline;
+    }
   }
 
   img {
@@ -47,10 +55,10 @@
 
 .display-synergy-modal {
   display: grid;
-  grid-template-areas: ". . x"
-  ". info ."
-  "champ champ champ";
-  grid-template-columns: .5fr 2fr .5fr;
+  grid-template-areas: ". . . x"
+  ". info info ."
+  ". champ champ .";
+  grid-template-columns: .15fr 2fr .5fr .15fr;
   text-align: center;
 
   img {
