@@ -27,6 +27,14 @@
   }
 }
 
+.ReactModal__Body--open {
+
+  .ReactModal__Overlay, .ReactModal__Overlay--after-open  {
+    background-color: $modal-overlay !important;
+  }
+}
+
+
 .Modal {
   background: $medium-bg;
   border-radius: 3px;
