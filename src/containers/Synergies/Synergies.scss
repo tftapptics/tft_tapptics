@@ -27,13 +27,12 @@
 .synergy-article {
   background-color: $modal-overlay;
   border: 1px solid $medium-bg;
-  color: #83806d;
+  color: $btn-bg;
   font-size: .9rem;
   margin: 1rem;
   padding: .5rem;
   text-align: center;
   width: 10rem;
-  // box-shadow: 7px 7px 14px #b5a13f;
   transition: .5s;
   &:hover {
     cursor: pointer;
