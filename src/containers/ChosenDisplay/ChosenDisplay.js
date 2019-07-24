@@ -8,16 +8,6 @@ import Stats from '../Stats/Stats';
 export class ChosenDisplay extends Component {
   constructor() {
     super();
-    this.state = {
-      currentTeam: [
-        {
-          name: 'vayne',
-          health: 400,
-          dmg: 260,
-          img: 'https://i.imgur.com/3Fj3uOv.png'
-        }
-      ]
-    }
   }
   
   render() {
@@ -33,6 +23,18 @@ export class ChosenDisplay extends Component {
         return <Honeycomb key={idx} idx={idx} img={rost.attributes.model_img}/>
     })
 
+    const currentRoster = this.props.roster.filter( hero => {
+      return hero.attributes.model_img !== ''
+    })
+
+    const displayRosterStats = currentRoster.map( rost => {
+      const firstName = rost.attributes.name.split(',')[0]
+      return <Stats health={rost.attributes.health[0]}
+                    dmg={rost.attributes.dmg}
+                    img={rost.attributes.champion_thumbnail}
+                    name={firstName} />
+    } )
+
     return (
       <div className='chosen-display'>
         <section className="current-roster">
@@ -43,12 +45,10 @@ export class ChosenDisplay extends Component {
               {displayChamps}
           </section>
           <article className="team-stats">
-            <Stats currentTeam={this.state.currentTeam} />
+            {displayRosterStats}
           </article>
           <article className="team-synergies">
             <h3>Current Synergies:</h3>
-            <h4>YORDLE</h4>
-            <h4>SORCERER</h4>
           </article>
         </section>
       </div>

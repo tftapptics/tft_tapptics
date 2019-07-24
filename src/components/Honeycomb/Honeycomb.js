@@ -16,7 +16,7 @@ export class Honeycomb extends Component {
         )
       } else {
         return (
-          <div className='tiles-main' onDragOver={() => this.props.setRosterIndex(this.props.idx)}>
+          <div className='tiles-main'  onDragOver={() => this.props.setRosterIndex(this.props.idx)}>
           </div>
         )
       }

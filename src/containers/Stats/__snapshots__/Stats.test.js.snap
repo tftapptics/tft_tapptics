@@ -1,26 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Stats should match the snapshot with all the data passed in 1`] = `
-<section
-  className="Stats"
->
-  <article>
-    <img
-      alt="Twisted Fate portrait"
-    />
-    <div>
-      <h5>
-        Twisted Fate
-      </h5>
-      <h6>
-        Health: 
-        400
-      </h6>
-      <h6>
-        Damage: 
-        72
-      </h6>
-    </div>
-  </article>
-</section>
+<article>
+  <img
+    alt="undefined portrait"
+  />
+  <div>
+    <h5 />
+    <h6>
+      Health: 
+    </h6>
+    <h6>
+      Damage: 
+    </h6>
+  </div>
+</article>
 `;
