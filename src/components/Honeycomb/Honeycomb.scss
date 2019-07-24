@@ -1,6 +1,8 @@
 .tiles-main {
-  margin: 15px;
-  display: inline-block;
+  margin: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 125px;
   width: 14%;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
@@ -10,6 +12,6 @@
 
 .tile-img {
   height: 80px;
-  width: 80%;
+  width: auto;
   position: absolute;
 }
