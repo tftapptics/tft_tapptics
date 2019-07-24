@@ -39,9 +39,21 @@
       text-align: center;
     }
 
+    
     .level-btns {
       display: inline-block;
     }
+  }
+  
+  .drag-title {
+    color: #83806d;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .stats-title {
+    text-align: center;
+    margin-top: 0;
   }
 
   .current-roster {
@@ -90,6 +102,7 @@
 }
 
 .honey-2 {
-  margin: 2.5rem 0;
+  margin: 7.5rem 0;
   grid-area: honey2;
+  margin-left: 1rem;
 }
