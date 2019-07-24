@@ -10,7 +10,7 @@ export class Honeycomb extends Component {
     {
       if(this.props.img !== '') {
         return (
-          <div className='tiles-main' onDragOver={() => this.props.setRosterIndex(this.props.idx)}>
+          <div className='tiles-main' style={{backgroundColor: 'rgba(63, 81, 181, 0.58)'}} onDragOver={() => this.props.setRosterIndex(this.props.idx)}>
             <img className='tile-img' src={this.props.img}/>
           </div>
         )

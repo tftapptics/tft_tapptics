@@ -58,6 +58,8 @@
   }
 
   .Honeycomb-section {
+    display: flex;
+    flex-wrap: wrap;
     grid-area: honey1;
   }
 
