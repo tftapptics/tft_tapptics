@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Honeycomb from '../../components/Honeycomb/Honeycomb';
 import HoneycombDrag from '../../components/HoneycombDrag/HoneycombDrag';
 import Stats from '../Stats/Stats';
+import SynergyStats from '../../components/SynergyStats/SynergyStats';
 
 export class ChosenDisplay extends Component {
   constructor() {
@@ -35,6 +36,13 @@ export class ChosenDisplay extends Component {
                     name={firstName} />
     } )
 
+    const displaySynergyStats = currentRoster.map(r => {
+      console.log(r)
+        return r.attributes.origin_class_types.map(type => {
+            return <SynergyStats name={type.name} thumbnail={type.thumbnail} />
+        })
+      })
+
     return (
       <div className='chosen-display'>
         <section className="current-roster">
@@ -49,6 +57,7 @@ export class ChosenDisplay extends Component {
           </article>
           <article className="team-synergies">
             <h3>Current Synergies:</h3>
+            {displaySynergyStats}
           </article>
         </section>
       </div>
