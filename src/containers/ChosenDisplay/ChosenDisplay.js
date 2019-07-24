@@ -35,6 +35,11 @@ export class ChosenDisplay extends Component {
                     name={firstName} />
     } )
 
+    // const synergies = currentRoster.reduce((acc, cur) => {
+    //   let origins = cur.attributes.origin_class_types
+      
+    // }, {})
+
     return (
       <div className='chosen-display'>
         <section className="current-roster">
