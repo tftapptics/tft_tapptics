@@ -47,9 +47,11 @@ export class ChosenDisplay extends Component {
               {displayRoster}
           </section>
           <section className='honey-2'>
+            <h2 className='drag-title'>Drag Your Selection!</h2>
               {displayChamps}
           </section>
           <article className="team-stats">
+            <h2 className='stats-title'>Current Roster:</h2>
             {displayRosterStats}
           </article>
           <article className="team-synergies">
