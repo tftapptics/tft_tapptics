@@ -17,6 +17,10 @@ if you'd like to run this application from your terminal instead of your broswer
 
 ## Screenshots
 
+Wireframe
+
+[![Screen-Shot-2019-07-24-at-10-03-05-PM.png](https://i.postimg.cc/2jTvMwqG/Screen-Shot-2019-07-24-at-10-03-05-PM.png)](https://postimg.cc/LhYnZj3g)
+
 Carousel Page - this is page where users land and are prompted to choose a starting champion.
 
 [![screencapture-localhost-3000-2019-07-24-21-47-49.png](https://i.postimg.cc/WbnrR7hS/screencapture-localhost-3000-2019-07-24-21-47-49.png)](https://postimg.cc/ZCW0ppPy)
@@ -27,10 +31,11 @@ Champion
 
 [![screencapture-localhost-3000-Champions-2019-07-24-21-48-32.png](https://i.postimg.cc/CKWnCPQM/screencapture-localhost-3000-Champions-2019-07-24-21-48-32.png)](https://postimg.cc/yJyNsPK2)
 
-
 Synergy
 
 [![screencapture-localhost-3000-Synergies-2019-07-24-21-48-50.png](https://i.postimg.cc/tCVf2YJX/screencapture-localhost-3000-Synergies-2019-07-24-21-48-50.png)](https://postimg.cc/svsw2f58)
+
+Items
 
 ## Contributors
 ### Front End Contributors
