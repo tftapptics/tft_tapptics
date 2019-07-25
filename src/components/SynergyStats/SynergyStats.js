@@ -25,7 +25,7 @@ export class SynergyStats extends Component {
     return (
 
       <article className="SynergyStats">
-        {bonuses}
+        {bonuses.map(b => <p>{b}</p>)}
       </article>
     )
   }
