@@ -33,11 +33,14 @@ export class ChosenDisplay extends Component {
                     name={firstName} />
     } )
 
-    const displaySynergyStats = currentRoster.map(r => {
-        return r.attributes.origin_class_types.map(type => {
-            return <SynergyStats name={type.name} thumbnail={type.thumbnail} roster={this.props.roster} />
-        })
-      })
+    // const displaySynergyStats = currentRoster.map(r => {
+    //     return r.attributes.origin_class_types.map(type => {
+    //         return <SynergyStats name={type.name} 
+    //                              thumbnail={type.thumbnail}
+    //                              roster={this.props.roster} 
+    //                              synergies={this.props.synergies} />
+    //     })
+    //   })
 
     return (
       <div className='chosen-display'>
@@ -55,7 +58,9 @@ export class ChosenDisplay extends Component {
           </article>
           <article className="team-synergies">
             <h3>Current Synergies:</h3>
-            {displaySynergyStats}
+            <SynergyStats roster={this.props.roster} 
+                          synergies={this.props.synergies} />
+            {/* {displaySynergyStats} */}
           </article>
         </section>
       </div>
@@ -69,7 +74,8 @@ ChosenDisplay.propTypes = {
 
 export const mapStateToProps = state => ({
   champions: state.champions,
-  roster: state.setRoster
+  roster: state.setRoster,
+  synergies: state.synergies
 });
 
 export default connect(mapStateToProps)(ChosenDisplay);

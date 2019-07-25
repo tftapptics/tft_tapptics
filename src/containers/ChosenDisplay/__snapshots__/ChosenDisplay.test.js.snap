@@ -45,6 +45,17 @@ exports[`ChosenDisplay should match the snapshot with all the data passed in 1`]
       <h3>
         Current Synergies:
       </h3>
+      <SynergyStats
+        roster={
+          Array [
+            Object {
+              "attributes": Object {
+                "model_img": "",
+              },
+            },
+          ]
+        }
+      />
     </article>
   </section>
 </div>
