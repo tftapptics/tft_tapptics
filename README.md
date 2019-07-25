@@ -7,6 +7,14 @@ The user will then be allowed to play through and add to their team any champion
 The live application is available here.
 The backend repository is available [here](https://github.com/tftapptics/tft_backend).
 
+## Installation / Setup
+if you'd like to run this application from your terminal instead of your broswer, follow these commands:
+
+ - clone this repo
+ - npm install
+ - npm start
+ - start building!
+
 ## Screenshots
 
 Carousel Page - this is page where users land and are prompted to choose a starting champion.
