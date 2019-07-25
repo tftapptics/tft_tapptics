@@ -35,11 +35,14 @@
 
   .recipe-box {
     margin-bottom: 2rem;
+    padding: 10px;
   }
 
   .new-recipe-box {
     margin: .5rem;
+    padding: 10px;
   }
+
 
   article {
     background-color: $modal-overlay;
@@ -73,13 +76,39 @@
       grid-area: info;
     }
 
+    .plus {
+      font-size: 20px;
+    }
+
     transition: 1s;
 
     &:hover {
       cursor: pointer;
       background: rgba(41, 59, 103, 0.85);
       text-decoration: underline;
-      opacity: .6;
+      // opacity: .6;
     }
   }
+}
+
+.recipe-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 7rem;
+  margin: auto;
+}
+
+.recipe-descript {
+  // text-align: center;
+  // margin: auto;
+  width: 100%;
+}
+
+.float {
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  justify-content: center;
+  flex-direction: column;
 }
