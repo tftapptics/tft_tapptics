@@ -45,3 +45,12 @@ export const setItems = items => ({
   items
 });
 
+export const setRecipes = recipes => ({
+  type: 'SET_RECIPES',
+  recipes
+})
+
+export const setItemName = name => ({
+  type: 'SET_ITEM_NAME',
+  name
+})

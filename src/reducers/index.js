@@ -7,6 +7,8 @@ import { dragIndex } from './dragIndexReducer';
 import { rosterIndex } from './rosterIndexReducer';
 import { synergies } from './synergiesReducer';
 import { items } from './itemsReducer';
+import { recipes } from './recipesReducer';
+import { itemName } from './itemNameReducer';
 
 export const rootReducer = combineReducers({
   isLoading,
@@ -16,5 +18,7 @@ export const rootReducer = combineReducers({
   dragIndex,
   rosterIndex,
   synergies,
-  items
+  items,
+  recipes,
+  itemName
 })
