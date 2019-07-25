@@ -7,7 +7,22 @@ The user will then be allowed to play through and add to their team any champion
 The live application is available here.
 The backend repository is available [here](https://github.com/tftapptics/tft_backend).
 
-## Install/Set Up
+## Screenshots
+
+Carousel Page - this is page where users land and are prompted to choose a starting champion.
+
+[![screencapture-localhost-3000-2019-07-24-21-47-49.png](https://i.postimg.cc/WbnrR7hS/screencapture-localhost-3000-2019-07-24-21-47-49.png)](https://postimg.cc/ZCW0ppPy)
+
+Informational Modal Displays - users can come to the champions, items, and synergy pages to select and view more information about a specific champion, item, or synergy to further their decision making process when building their team.
+
+Champion
+
+[![screencapture-localhost-3000-Champions-2019-07-24-21-48-32.png](https://i.postimg.cc/CKWnCPQM/screencapture-localhost-3000-Champions-2019-07-24-21-48-32.png)](https://postimg.cc/yJyNsPK2)
+
+
+Synergy
+
+[![screencapture-localhost-3000-Synergies-2019-07-24-21-48-50.png](https://i.postimg.cc/tCVf2YJX/screencapture-localhost-3000-Synergies-2019-07-24-21-48-50.png)](https://postimg.cc/svsw2f58)
 
 ## Contributors
 ### Front End Contributors
