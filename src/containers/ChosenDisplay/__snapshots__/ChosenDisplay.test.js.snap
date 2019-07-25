@@ -1,3 +1,62 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ChosenDisplay should match the snapshot iwth all the data passed in 1`] = `undefined`;
+exports[`ChosenDisplay should match the snapshot with all the data passed in 1`] = `
+<div
+  className="chosen-display"
+>
+  <section
+    className="current-roster"
+  >
+    <section
+      className="Honeycomb-section"
+    >
+      <Connect(Honeycomb)
+        idx={0}
+        img=""
+        key="0"
+      />
+    </section>
+    <section
+      className="honey-2"
+    >
+      <h2
+        className="drag-title"
+      >
+        Drag Your Selection!
+      </h2>
+      <Connect(HoneycombDrag)
+        idx={0}
+        key="Morgana"
+        name="Morgana"
+      />
+    </section>
+    <article
+      className="team-stats"
+    >
+      <h2
+        className="stats-title"
+      >
+        Current Roster:
+      </h2>
+    </article>
+    <article
+      className="team-synergies"
+    >
+      <h3>
+        Current Synergy Bonuses:
+      </h3>
+      <SynergyStats
+        roster={
+          Array [
+            Object {
+              "attributes": Object {
+                "model_img": "",
+              },
+            },
+          ]
+        }
+      />
+    </article>
+  </section>
+</div>
+`;

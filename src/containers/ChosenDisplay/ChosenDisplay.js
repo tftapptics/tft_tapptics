@@ -3,12 +3,10 @@ import { PropTypes } from 'prop-types'
 import { connect } from 'react-redux';
 import Honeycomb from '../../components/Honeycomb/Honeycomb';
 import HoneycombDrag from '../../components/HoneycombDrag/HoneycombDrag';
-import Stats from '../Stats/Stats';
+import Stats from '../../components/Stats/Stats';
+import SynergyStats from '../../components/SynergyStats/SynergyStats';
 
 export class ChosenDisplay extends Component {
-  constructor() {
-    super();
-  }
   
   render() {
     const displayChamps = this.props.champions.map( (champion, idx) => {
@@ -35,11 +33,6 @@ export class ChosenDisplay extends Component {
                     name={firstName} />
     } )
 
-    // const synergies = currentRoster.reduce((acc, cur) => {
-    //   let origins = cur.attributes.origin_class_types
-      
-    // }, {})
-
     return (
       <div className='chosen-display'>
         <section className="current-roster">
@@ -55,7 +48,9 @@ export class ChosenDisplay extends Component {
             {displayRosterStats}
           </article>
           <article className="team-synergies">
-            <h3>Current Synergies:</h3>
+            <h3>Current Synergy Bonuses:</h3>
+            <SynergyStats roster={this.props.roster} 
+                          synergies={this.props.synergies} />
           </article>
         </section>
       </div>
@@ -69,7 +64,8 @@ ChosenDisplay.propTypes = {
 
 export const mapStateToProps = state => ({
   champions: state.champions,
-  roster: state.setRoster
+  roster: state.setRoster,
+  synergies: state.synergies
 });
 
 export default connect(mapStateToProps)(ChosenDisplay);

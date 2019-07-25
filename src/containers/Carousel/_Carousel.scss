@@ -23,14 +23,13 @@
   border: 3px solid black;
   text-align: center;
   display: flex;
-  // justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
 .car-title {
-  color: #bfa784;
-  text-shadow: 6px 6px 5px #090909;
+  color: $btn-bg;
+  text-shadow: 3px 3px 4px $btn-border;
 }
 
 .images {
@@ -47,7 +46,7 @@
   opacity: 0.7;
   filter: drop-shadow(2px 2px 9px #673AB7) drop-shadow(-2px -2px 17px white);
   &:hover {
-    filter: drop-shadow(2px 2px 9px white) drop-shadow(-2px -2px 17px red);
+    filter: drop-shadow(2px 2px 9px white) drop-shadow(-2px -2px 17px gold);
     cursor: pointer;
     opacity: 1;
   }

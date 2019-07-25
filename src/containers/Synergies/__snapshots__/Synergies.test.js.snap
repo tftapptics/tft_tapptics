@@ -34,6 +34,7 @@ exports[`Synergies should match the snapshot with all the data passed in 1`] = `
     className="Modal"
     closeTimeoutMS={0}
     contentLabel="Synergy Modal"
+    id="Synergy-modal"
     isOpen={false}
     parentSelector={[Function]}
     portalClassName="ReactModalPortal"
