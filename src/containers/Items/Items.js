@@ -33,10 +33,13 @@ export class Items extends Component {
             <h4>{recipe.attributes.name}</h4>
           </a>
           <ReactTooltip id={recipe.attributes.name} type='dark' >
-            <span>
-              <img src={recipe.attributes.raw_items[0].thumbnail}/> 
-              <p className='plus'>+</p> 
-              <img src={recipe.attributes.raw_items[1].thumbnail}/>
+            <span className='float'>
+              <div className='recipe-items'>
+                <img src={recipe.attributes.raw_items[0].thumbnail}/> 
+                <p className='plus'>+</p> 
+                <img src={recipe.attributes.raw_items[1].thumbnail}/>
+              </div>
+              <p className='recipe-descript'>{recipe.attributes.description}</p>
             </span>
           </ReactTooltip>
         </article>
@@ -52,10 +55,13 @@ export class Items extends Component {
           <h4>{recipe.attributes.name}</h4>
         </a>
         <ReactTooltip id={recipe.attributes.name} type='dark' >
-          <span>
-            <img src={recipe.attributes.raw_items[0].thumbnail}/> 
-            <p className='plus'>+</p> 
-            <img src={recipe.attributes.raw_items[1].thumbnail}/>
+          <span className='float'>
+            <div className='recipe-items'>
+              <img src={recipe.attributes.raw_items[0].thumbnail}/> 
+              <p className='plus'>+</p> 
+              <img src={recipe.attributes.raw_items[1].thumbnail}/>
+            </div>
+            <p className='recipe-descript'>{recipe.attributes.description}</p>
           </span>
         </ReactTooltip>
       </article>

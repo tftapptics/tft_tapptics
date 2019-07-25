@@ -33,12 +33,15 @@
   padding: .5rem;
   text-align: center;
   width: 10rem;
-  // box-shadow: 7px 7px 14px #b5a13f;
   transition: .5s;
   &:hover {
     cursor: pointer;
-    background-color: rgba(41, 59, 103, 0.85);
-    box-shadow: 10px 10px 4px #b5a13f;
+    background-color: $card-hover-bg;
+    box-shadow: $card-hover-shadow;
+
+    h3 {
+      text-decoration: underline;
+    }
   }
 
   img {
@@ -46,12 +49,20 @@
   }
 }
 
+.ReactModal__Overlay--after-open {
+  background-color: $modal-overlay !important;
+}
+
+#Synergy-modal {
+  width: 50%;
+}
+
 .display-synergy-modal {
   display: grid;
-  grid-template-areas: ". . x"
-  ". info ."
-  "champ champ champ";
-  grid-template-columns: .5fr 2fr .5fr;
+  grid-template-areas: ". . . x"
+  ". info info ."
+  ". champ champ .";
+  grid-template-columns: .5fr 2fr 2fr .5fr;
   text-align: center;
 
   img {

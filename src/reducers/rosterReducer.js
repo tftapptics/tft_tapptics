@@ -1,6 +1,7 @@
 const dumbyData = {
   attributes: {
-    model_img: ''
+    model_img: '',
+    origin_class_types: []
   }
 }
 

@@ -3,7 +3,7 @@
 @import '../../components/ChosenCharacters/ChosenCharacters';
 @import '../../containers/ChosenDisplay/ChosenDisplay';
 @import '../../components/CharacterDisplay/CharacterDisplay';
-@import '../../containers/Stats/Stats';
+@import '../../components/Stats/Stats.scss';
 @import '../../containers/Synergies/Synergies';
 @import '../../containers/Items/Items';
 @import '../../components/Header/Header.scss';
@@ -14,3 +14,4 @@
 @import '../../containers/Synergies/Synergies.scss';
 @import '../../components/HoneycombDrag/HoneycombDrag.scss';
 @import '../../components/InitialCharacter/InitialCharacter';
+@import '../../components/SynergyStats/SynergyStats.scss';

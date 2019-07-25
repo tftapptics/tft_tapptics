@@ -1,11 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Stats should match the snapshot with all the data passed in 1`] = `
-<article>
+<article
+  className="Stats"
+>
   <img
     alt="undefined portrait"
   />
-  <div>
+  <div
+    className="stats-info"
+  >
     <h5 />
     <h6>
       Health: 

@@ -79,6 +79,7 @@ export class Synergies extends Component {
         <ReactModal
            isOpen={this.state.showModal}
            className="Modal"
+           id="Synergy-modal"
            contentLabel="Synergy Modal">
            <div className="modal-display-synergies">
             { this.state.showModal && displayModal }

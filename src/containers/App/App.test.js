@@ -106,16 +106,19 @@ describe('App', () => {
     let mockFunc;
     let mockFetchSynergies;
     let mockFetchItems;
+    let mockFetchRecipes;
     let wrapper;
 
     beforeEach(() => {
       mockFunc = jest.fn()
       mockFetchSynergies = jest.fn();
       mockFetchItems = jest.fn();
+      mockFetchRecipes = jest.fn();
       wrapper = shallow(<App champions={mockChamps}
                              fetchChampions={mockFunc}
                              fetchSynergies={mockFetchSynergies}
                              fetchItems={mockFetchItems}
+                             fetchRecipes={mockFetchRecipes}
                              />);
     });
 
