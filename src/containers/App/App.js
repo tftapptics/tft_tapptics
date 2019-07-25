@@ -13,6 +13,7 @@ import ChosenDisplay from '../ChosenDisplay/ChosenDisplay';
 import { fetchChampions } from '../../thunks/fetchChampions';
 import { fetchSynergies } from '../../thunks/fetchSynergies';
 import { fetchItems } from '../../thunks/fetchItems';
+import { fetchRecipes } from '../../thunks/fetchRecipes';
 
 
 
@@ -22,6 +23,7 @@ export class App extends Component {
     this.props.fetchChampions('https://tft-backend.herokuapp.com/api/v1/champions');
     this.props.fetchSynergies('https://tft-backend.herokuapp.com/api/v1/origin_class_type');
     this.props.fetchItems('https://tft-backend.herokuapp.com/api/v1/raw_items');
+    this.props.fetchRecipes('https://tft-backend.herokuapp.com/api/v1/recipes');
   }
   
 
@@ -57,7 +59,8 @@ export const mapStateToProps = state => ({
 export const mapDispatchToProps = dispatch => ({
   fetchChampions: url => dispatch(fetchChampions(url)),
   fetchSynergies: url => dispatch(fetchSynergies(url)),
-  fetchItems: url => dispatch(fetchItems(url))
+  fetchItems: url => dispatch(fetchItems(url)),
+  fetchRecipes: url => dispatch(fetchRecipes(url))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

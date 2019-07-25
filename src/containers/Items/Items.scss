@@ -15,6 +15,30 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-bottom: 2rem;
+  }
+
+  .display-recipes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: scroll;
+    height: 60vh;
+    width: 98%;
+    margin: auto;
+    background: #12111166;
+    padding: 10px;
+    border: 2px solid #83806d42;
+    border-radius: 5px;
+  }
+
+  .recipe-box {
+    margin-bottom: 2rem;
+  }
+
+  .new-recipe-box {
+    margin: .5rem;
   }
 
   article {
@@ -47,6 +71,15 @@
     p {
       font-size: .8rem;
       grid-area: info;
+    }
+
+    transition: 1s;
+
+    &:hover {
+      cursor: pointer;
+      background: rgba(41, 59, 103, 0.85);
+      text-decoration: underline;
+      opacity: .6;
     }
   }
 }
