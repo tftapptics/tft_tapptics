@@ -33,15 +33,6 @@ export class ChosenDisplay extends Component {
                     name={firstName} />
     } )
 
-    // const displaySynergyStats = currentRoster.map(r => {
-    //     return r.attributes.origin_class_types.map(type => {
-    //         return <SynergyStats name={type.name} 
-    //                              thumbnail={type.thumbnail}
-    //                              roster={this.props.roster} 
-    //                              synergies={this.props.synergies} />
-    //     })
-    //   })
-
     return (
       <div className='chosen-display'>
         <section className="current-roster">
@@ -57,10 +48,9 @@ export class ChosenDisplay extends Component {
             {displayRosterStats}
           </article>
           <article className="team-synergies">
-            <h3>Current Synergies:</h3>
+            <h3>Current Synergy Bonuses:</h3>
             <SynergyStats roster={this.props.roster} 
                           synergies={this.props.synergies} />
-            {/* {displaySynergyStats} */}
           </article>
         </section>
       </div>

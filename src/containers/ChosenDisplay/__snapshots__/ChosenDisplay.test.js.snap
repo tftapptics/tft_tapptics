@@ -43,7 +43,7 @@ exports[`ChosenDisplay should match the snapshot with all the data passed in 1`]
       className="team-synergies"
     >
       <h3>
-        Current Synergies:
+        Current Synergy Bonuses:
       </h3>
       <SynergyStats
         roster={
