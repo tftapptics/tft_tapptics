@@ -35,10 +35,12 @@
 
   .recipe-box {
     margin-bottom: 2rem;
+    padding: 10px;
   }
 
   .new-recipe-box {
     margin: .5rem;
+    padding: 10px;
   }
 
   article {
@@ -73,13 +75,17 @@
       grid-area: info;
     }
 
+    .plus {
+      font-size: 20px;
+    }
+
     transition: 1s;
 
     &:hover {
       cursor: pointer;
       background: rgba(41, 59, 103, 0.85);
       text-decoration: underline;
-      opacity: .6;
+      // opacity: .6;
     }
   }
 }

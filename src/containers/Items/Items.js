@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { setItemName } from '../../actions'
+import { setItemName } from '../../actions';
+import ReactTooltip from 'react-tooltip';
 
 export class Items extends Component {
 
@@ -25,21 +26,39 @@ export class Items extends Component {
     ))
 
     if(this.props.currentItem === '') {
-      displayRecipes = this.props.recipes.map(recipe => (
-          <article className='recipe-box'>
+      displayRecipes = this.props.recipes.map(recipe => ( 
+        <article className='recipe-box'>
+          <a data-tip data-for={recipe.attributes.name}>
             <img src={`https://${recipe.attributes.thumbnail}`} />
             <h4>{recipe.attributes.name}</h4>
-          </article>
+          </a>
+          <ReactTooltip id={recipe.attributes.name} type='dark' >
+            <span>
+              <img src={recipe.attributes.raw_items[0].thumbnail}/> 
+              <p className='plus'>+</p> 
+              <img src={recipe.attributes.raw_items[1].thumbnail}/>
+            </span>
+          </ReactTooltip>
+        </article>
       ))
     } else {
       let newRecipes = this.props.recipes.filter( recipe => {
         return recipe.attributes.raw_items.find(rawItem => rawItem.name === this.props.currentItem)
       })
       displayRecipes = newRecipes.map(recipe => (
-        <article className='new-recipe-box'>
+      <article className='new-recipe-box'>
+        <a data-tip data-for={recipe.attributes.name}>
           <img src={`https://${recipe.attributes.thumbnail}`} />
           <h4>{recipe.attributes.name}</h4>
-        </article>
+        </a>
+        <ReactTooltip id={recipe.attributes.name} type='dark' >
+          <span>
+            <img src={recipe.attributes.raw_items[0].thumbnail}/> 
+            <p className='plus'>+</p> 
+            <img src={recipe.attributes.raw_items[1].thumbnail}/>
+          </span>
+        </ReactTooltip>
+      </article>
     ))
     }
 
