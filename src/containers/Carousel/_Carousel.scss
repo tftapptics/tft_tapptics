@@ -35,8 +35,9 @@
 
 .images {
   width: 15%;
-  // background: red;
   height: 7rem;
+  display: flex;
+  justify-content: center;
 }
 
 .car-imgs {
