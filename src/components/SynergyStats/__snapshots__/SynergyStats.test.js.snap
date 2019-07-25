@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SynergyStats should match the snapshot with the data passed in 1`] = `
+<article
+  className="SynergyStats"
+>
+  <a
+    data-for="www.fakeurl.com"
+    data-tip={true}
+  >
+    <img
+      alt="Tristana"
+      src="www.fakeurl.com"
+    />
+  </a>
+  <ReactTooltip
+    className="modal-tooltip"
+    clickable={false}
+    effect="float"
+    id="www.fakeurl.com"
+    insecure={true}
+    resizeHide={true}
+    type="dark"
+    wrapper="div"
+  >
+    <h6>
+      Tristana
+    </h6>
+  </ReactTooltip>
+</article>
+`;

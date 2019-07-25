@@ -3,11 +3,15 @@ import * as actions from '../../actions';
 
 describe('setRoster', () => {
 
-  it('should return the initial state', () => {
-    const expected = [];
-    const result = setRoster(undefined, []);
+  let initialState = { attributes: {
+    model_img: ''
+  }}
 
-    expect(result).toEqual(expected);
+  it('should return the initial state', () => {
+    const expected = initialState;
+    const result = setRoster(undefined, initialState);
+
+    expect(...result).toEqual(expected);
   });
 
   it('should return the roster', () => {

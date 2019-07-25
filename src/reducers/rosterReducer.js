@@ -1,10 +1,44 @@
 const dumbyData = {
   attributes: {
     model_img: ''
+  },
+  attributes: {
+    model_img: ''
+  },
+  attributes: {
+    model_img: ''
+  }
+  ,attributes: {
+    model_img: ''
+  }
+  ,
+  attributes: {
+    model_img: ''
+  },
+  attributes: {
+    model_img: ''
+  },
+  attributes: {
+    model_img: ''
+  },
+  attributes: {
+    model_img: ''
+  },
+  attributes: {
+    model_img: ''
+  },
+  attributes: {
+    model_img: ''
+  },
+  attributes: {
+    model_img: ''
+  },
+  attributes: {
+    model_img: ''
   }
 }
 
-export const setRoster = (state = [dumbyData, dumbyData, dumbyData, dumbyData, dumbyData, dumbyData, dumbyData, dumbyData, dumbyData, dumbyData, dumbyData, dumbyData] , action) => {
+export const setRoster = (state = [dumbyData] , action) => {
   switch(action.type) {
     case 'SET_ROSTER':
       return action.champ

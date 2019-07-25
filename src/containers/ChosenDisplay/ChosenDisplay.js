@@ -3,13 +3,10 @@ import { PropTypes } from 'prop-types'
 import { connect } from 'react-redux';
 import Honeycomb from '../../components/Honeycomb/Honeycomb';
 import HoneycombDrag from '../../components/HoneycombDrag/HoneycombDrag';
-import Stats from '../Stats/Stats';
+import Stats from '../../components/Stats/Stats';
 import SynergyStats from '../../components/SynergyStats/SynergyStats';
 
 export class ChosenDisplay extends Component {
-  constructor() {
-    super();
-  }
   
   render() {
     const displayChamps = this.props.champions.map( (champion, idx) => {
@@ -37,9 +34,8 @@ export class ChosenDisplay extends Component {
     } )
 
     const displaySynergyStats = currentRoster.map(r => {
-      console.log(r)
         return r.attributes.origin_class_types.map(type => {
-            return <SynergyStats name={type.name} thumbnail={type.thumbnail} />
+            return <SynergyStats name={type.name} thumbnail={type.thumbnail} roster={this.props.roster} />
         })
       })
 
@@ -50,9 +46,11 @@ export class ChosenDisplay extends Component {
               {displayRoster}
           </section>
           <section className='honey-2'>
+            <h2 className='drag-title'>Drag Your Selection!</h2>
               {displayChamps}
           </section>
           <article className="team-stats">
+            <h2 className='stats-title'>Current Roster:</h2>
             {displayRosterStats}
           </article>
           <article className="team-synergies">
